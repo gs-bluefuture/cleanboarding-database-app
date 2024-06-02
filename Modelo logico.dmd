@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Global_Gabe" id="B224D1E3-2627-A41B-0B03-5ACE8F5D8D65" version="3.5">
+<createdBy>mniac</createdBy>
+<createdTime>2024-05-29 03:47:07 UTC</createdTime>
+<ownerDesignName>Global_Gabe</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>B224D1E3-2627-A41B-0B03-5ACE8F5D8D65</designId>
+</OSDM_Design>
