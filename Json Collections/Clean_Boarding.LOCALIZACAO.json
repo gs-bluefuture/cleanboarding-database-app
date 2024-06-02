@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "665c9d34b635b26735785349"
+  },
+  "id_localizacao": 1,
+  "latitude": -23.9672,
+  "longitude": -46.2975,
+  "porto": "Porto de Santos"
+},
+{
+  "_id": {
+    "$oid": "665c9d34b635b2673578534a"
+  },
+  "id_localizacao": 2,
+  "latitude": -22.8974,
+  "longitude": -43.1746,
+  "porto": "Porto do Rio de Janeiro"
+},
+{
+  "_id": {
+    "$oid": "665c9d34b635b2673578534b"
+  },
+  "id_localizacao": 3,
+  "latitude": -25.4326,
+  "longitude": -49.2712,
+  "porto": "Porto de Paranaguá"
+},
+{
+  "_id": {
+    "$oid": "665c9d34b635b2673578534c"
+  },
+  "id_localizacao": 4,
+  "latitude": -3.1469,
+  "longitude": -60.0144,
+  "porto": "Porto de Manaus"
+},
+{
+  "_id": {
+    "$oid": "665c9d34b635b2673578534d"
+  },
+  "id_localizacao": 5,
+  "latitude": 1.4558,
+  "longitude": -48.5016,
+  "porto": "Porto de Belém"
+}]

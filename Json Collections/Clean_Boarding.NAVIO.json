@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "665c9cb4b635b26735785344"
+  },
+  "id_navio": 1,
+  "nome": "Navio A",
+  "tipo_navio": "Cargueiro",
+  "capacidade_lastro": 5000
+},
+{
+  "_id": {
+    "$oid": "665c9cb4b635b26735785345"
+  },
+  "id_navio": 2,
+  "nome": "Navio B",
+  "tipo_navio": "Petroleiro",
+  "capacidade_lastro": 8000
+},
+{
+  "_id": {
+    "$oid": "665c9cb4b635b26735785346"
+  },
+  "id_navio": 3,
+  "nome": "Navio C",
+  "tipo_navio": "Graneleiro",
+  "capacidade_lastro": 6000
+},
+{
+  "_id": {
+    "$oid": "665c9cb4b635b26735785347"
+  },
+  "id_navio": 4,
+  "nome": "Navio D",
+  "tipo_navio": "Porta-Contêineres",
+  "capacidade_lastro": 7000
+},
+{
+  "_id": {
+    "$oid": "665c9cb4b635b26735785348"
+  },
+  "id_navio": 5,
+  "nome": "Navio E",
+  "tipo_navio": "Navio-Tanque",
+  "capacidade_lastro": 9000
+}]
