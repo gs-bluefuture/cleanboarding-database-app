@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="95A1B9DF-8A2C-98A1-A193-8B39B06FE746" name="LOCALIZACAO">
+<createdBy>mniac</createdBy>
+<createdTime>2024-05-29 04:36:08 UTC</createdTime>
+<ownerDesignName>Global_Gabe</ownerDesignName>
+<engineerTo>
+<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_localizacao" id="0205A009-931E-BDF3-20FB-C09551A54AB0">
+<createdBy>mniac</createdBy>
+<createdTime>2024-05-29 04:42:38 UTC</createdTime>
+<ownerDesignName>Global_Gabe</ownerDesignName>
+<engineerTo>
+<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="latitude" id="939090E4-BF8C-2762-906A-C08FB5DB74C0">
+<createdBy>mniac</createdBy>
+<createdTime>2024-05-29 04:43:00 UTC</createdTime>
+<ownerDesignName>Global_Gabe</ownerDesignName>
+<engineerTo>
+<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="longitude" id="7CD33D71-F5B9-91BB-DEEE-789569F145B8">
+<createdBy>mniac</createdBy>
+<createdTime>2024-05-29 04:43:12 UTC</createdTime>
+<ownerDesignName>Global_Gabe</ownerDesignName>
+<engineerTo>
+<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="porto" id="E130DA5A-B6A7-6143-F6CE-EC7D4B0ABE4E">
+<createdBy>mniac</createdBy>
+<createdTime>2024-05-29 04:43:31 UTC</createdTime>
+<ownerDesignName>Global_Gabe</ownerDesignName>
+<engineerTo>
+<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="DA959466-B6C2-18CB-7554-44F7BB33BFBB" name="LOCALIZACAO PK">
+<createdBy>mniac</createdBy>
+<createdTime>2024-05-29 04:43:28 UTC</createdTime>
+<ownerDesignName>Global_Gabe</ownerDesignName>
+<engineerTo>
+<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0205A009-931E-BDF3-20FB-C09551A54AB0</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

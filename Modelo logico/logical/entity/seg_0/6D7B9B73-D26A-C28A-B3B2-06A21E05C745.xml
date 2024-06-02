@@ -1,0 +1,130 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6D7B9B73-D26A-C28A-B3B2-06A21E05C745" name="HISTORICO_LOCALIZACAO">
+<createdBy>mniac</createdBy>
+<createdTime>2024-05-29 04:35:55 UTC</createdTime>
+<ownerDesignName>Global_Gabe</ownerDesignName>
+<engineerTo>
+<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_localizacao" id="AE0A2735-CB0A-E322-8B27-F11BBCA54EDA">
+<createdBy>mniac</createdBy>
+<createdTime>2024-05-29 04:44:18 UTC</createdTime>
+<generatorID>FF16182C-3C81-D698-379F-4C0B4239F26D</generatorID>
+<ownerDesignName>Global_Gabe</ownerDesignName>
+<engineerTo>
+<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+</engineerTo>
+<referedAttribute>0205A009-931E-BDF3-20FB-C09551A54AB0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_historico" id="A1004674-DDFD-FDE1-8F4D-F1A020D84B44">
+<createdBy>mniac</createdBy>
+<createdTime>2024-05-29 04:51:51 UTC</createdTime>
+<ownerDesignName>Global_Gabe</ownerDesignName>
+<engineerTo>
+<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="historico_timestamp" id="A7A51FB6-43B9-E7F7-3B03-C9E355B04B0E">
+<createdBy>mniac</createdBy>
+<createdTime>2024-05-29 04:52:25 UTC</createdTime>
+<ownerDesignName>Global_Gabe</ownerDesignName>
+<engineerTo>
+<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT047</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_monitoramento" id="6781DD8F-1387-D8AD-22D6-DA96B498746A">
+<createdBy>mniac</createdBy>
+<createdTime>2024-05-29 04:57:05 UTC</createdTime>
+<generatorID>43F35DF2-4DC0-DABC-960B-51DAF85ED933</generatorID>
+<ownerDesignName>Global_Gabe</ownerDesignName>
+<engineerTo>
+<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+</engineerTo>
+<referedAttribute>26D9B704-4090-31AD-0155-203D6DC1BB9D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_navio" id="96892466-A6D8-5650-774F-FFD9DB5984A1">
+<createdBy>mniac</createdBy>
+<createdTime>2024-05-29 04:57:58 UTC</createdTime>
+<generatorID>FA58E244-A262-F12F-14D5-20D806A4AAAF</generatorID>
+<ownerDesignName>Global_Gabe</ownerDesignName>
+<engineerTo>
+<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+</engineerTo>
+<referedAttribute>B81477DE-E190-81BE-5504-39BA9FBC9B89</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_operacao" id="9D1ECD8C-2369-59D7-081C-44224B6E5213">
+<createdBy>mniac</createdBy>
+<createdTime>2024-05-29 04:58:51 UTC</createdTime>
+<generatorID>43F35DF2-4DC0-DABC-960B-51DAF85ED933</generatorID>
+<ownerDesignName>Global_Gabe</ownerDesignName>
+<engineerTo>
+<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+</engineerTo>
+<referedAttribute>AFB3E6FC-5273-6231-0AFF-68B43DC19B00</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_localizacao1" id="890FA488-82C5-948D-CAFA-228AC5910F64">
+<createdBy>mniac</createdBy>
+<createdTime>2024-05-29 04:58:51 UTC</createdTime>
+<generatorID>43F35DF2-4DC0-DABC-960B-51DAF85ED933</generatorID>
+<ownerDesignName>Global_Gabe</ownerDesignName>
+<engineerTo>
+<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+</engineerTo>
+<referedAttribute>927C85F4-FFDA-19A7-5CE6-70F793E8B2CD</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="6B340DDC-4D6B-7D43-7928-7CBC3F852792" name="LOCALIZACAO_HISTORICO PK">
+<createdBy>mniac</createdBy>
+<createdTime>2024-05-29 04:43:28 UTC</createdTime>
+<ownerDesignName>Global_Gabe</ownerDesignName>
+<engineerTo>
+<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>AE0A2735-CB0A-E322-8B27-F11BBCA54EDA</attributeRef>
+<attributeRef>A1004674-DDFD-FDE1-8F4D-F1A020D84B44</attributeRef>
+<attributeRef>96892466-A6D8-5650-774F-FFD9DB5984A1</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

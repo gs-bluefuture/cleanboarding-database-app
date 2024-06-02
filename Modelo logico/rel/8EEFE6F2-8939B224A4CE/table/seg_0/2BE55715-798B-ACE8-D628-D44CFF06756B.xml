@@ -1,0 +1,161 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2BE55715-798B-ACE8-D628-D44CFF06756B" name="HISTORICO_LOCALIZACAO">
+<createdBy>mniac</createdBy>
+<createdTime>2024-05-31 01:44:31 UTC</createdTime>
+<generatorID>6D7B9B73-D26A-C28A-B3B2-06A21E05C745</generatorID>
+<ownerDesignName>Global_Gabe</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="LOCALIZACAO_id_localizacao" id="82BCD8B8-056B-BD84-1AEF-66B262608F8B">
+<createdBy>mniac</createdBy>
+<createdTime>2024-05-31 01:44:31 UTC</createdTime>
+<generatorID>AE0A2735-CB0A-E322-8B27-F11BBCA54EDA</generatorID>
+<ownerDesignName>Global_Gabe</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B2BC19E1-AD30-F7B2-A316-7DF746398C2B" referredColumn="3DC41F63-197E-1A8F-FC48-677E7CFFCCEB"/>
+</associations>
+</Column>
+<Column name="id_historico" id="6A4F5234-0061-9412-64AB-4B47177FF037">
+<createdBy>mniac</createdBy>
+<createdTime>2024-05-31 01:44:31 UTC</createdTime>
+<generatorID>A1004674-DDFD-FDE1-8F4D-F1A020D84B44</generatorID>
+<ownerDesignName>Global_Gabe</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="historico_timestamp" id="07ED19B3-9229-AB15-47D6-8A16EE9C0348">
+<createdBy>mniac</createdBy>
+<createdTime>2024-05-31 01:44:31 UTC</createdTime>
+<generatorID>A7A51FB6-43B9-E7F7-3B03-C9E355B04B0E</generatorID>
+<ownerDesignName>Global_Gabe</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT047</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MONITORAMENTO_OPERACAO_id_monitoramento" id="6A406033-71B2-8062-AD3C-48184E14254F">
+<createdBy>mniac</createdBy>
+<createdTime>2024-05-31 01:44:31 UTC</createdTime>
+<generatorID>6781DD8F-1387-D8AD-22D6-DA96B498746A</generatorID>
+<ownerDesignName>Global_Gabe</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6F62149F-BFCF-1D52-09F5-D99A6929DFC1" referredColumn="F5F04A89-7655-85AD-48A0-0E854DB3704A"/>
+</associations>
+</Column>
+<Column name="NAVIO_id_navio" id="50698DFC-CEE9-7A1C-BD26-B1B6D94CB4E7">
+<createdBy>mniac</createdBy>
+<createdTime>2024-05-31 01:44:31 UTC</createdTime>
+<generatorID>96892466-A6D8-5650-774F-FFD9DB5984A1</generatorID>
+<ownerDesignName>Global_Gabe</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="88D11383-1E19-BEA5-AD47-E2C0DC07D4B5" referredColumn="B80DE9A1-31BA-D987-6317-748DA3EF42E2"/>
+</associations>
+</Column>
+<Column name="MONITORAMENTO_OPERACAO_OPERACAO_LASTRO_id_operacao" id="F8D1E48B-C75B-3B6B-F480-18D8B9F432B5">
+<createdBy>mniac</createdBy>
+<createdTime>2024-05-31 01:44:31 UTC</createdTime>
+<generatorID>9D1ECD8C-2369-59D7-081C-44224B6E5213</generatorID>
+<ownerDesignName>Global_Gabe</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6F62149F-BFCF-1D52-09F5-D99A6929DFC1" referredColumn="CA52FE4F-94DC-2DBF-1A76-F045B9B3A1E0"/>
+</associations>
+</Column>
+<Column name="MONITORAMENTO_OPERACAO_OPERACAO_LASTRO_id_localizacao" id="961703C2-7345-8EF7-D3ED-532015186D3E">
+<createdBy>mniac</createdBy>
+<createdTime>2024-05-31 01:44:31 UTC</createdTime>
+<generatorID>890FA488-82C5-948D-CAFA-228AC5910F64</generatorID>
+<ownerDesignName>Global_Gabe</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6F62149F-BFCF-1D52-09F5-D99A6929DFC1" referredColumn="DF55FA1F-F7B1-51B4-E23C-6D3772EF2976"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3B6C31CA-0C75-4A7A-91D8-14CC2B7EE05E" name="HISTORICO_LOCALIZACAO_PK">
+<createdBy>mniac</createdBy>
+<createdTime>2024-05-31 01:44:31 UTC</createdTime>
+<generatorID>6B340DDC-4D6B-7D43-7928-7CBC3F852792</generatorID>
+<ownerDesignName>Global_Gabe</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="82BCD8B8-056B-BD84-1AEF-66B262608F8B"/>
+<colUsage columnID="6A4F5234-0061-9412-64AB-4B47177FF037"/>
+<colUsage columnID="50698DFC-CEE9-7A1C-BD26-B1B6D94CB4E7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="089E7AD9-43E5-4B05-99A4-4318CF17F7B5" name="HISTORICO_LOCALIZACAO_NAVIO_FK">
+<createdBy>mniac</createdBy>
+<createdTime>2024-05-31 01:44:31 UTC</createdTime>
+<generatorID>FA58E244-A262-F12F-14D5-20D806A4AAAF</generatorID>
+<ownerDesignName>Global_Gabe</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="50698DFC-CEE9-7A1C-BD26-B1B6D94CB4E7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EEDF862A-49AE-F447-4EDD-24CECBF1B26B" name="HISTORICO_LOCALIZACAO_LOCALIZACAO_FK">
+<createdBy>mniac</createdBy>
+<createdTime>2024-05-31 01:44:31 UTC</createdTime>
+<generatorID>FF16182C-3C81-D698-379F-4C0B4239F26D</generatorID>
+<ownerDesignName>Global_Gabe</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="82BCD8B8-056B-BD84-1AEF-66B262608F8B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="84B5F1A2-0265-0C68-BD73-5FAA01EB8CDE" name="HISTORICO_LOCALIZACAO_MONITORAMENTO_OPERACAO_FK">
+<createdBy>mniac</createdBy>
+<createdTime>2024-05-31 01:44:31 UTC</createdTime>
+<generatorID>43F35DF2-4DC0-DABC-960B-51DAF85ED933</generatorID>
+<ownerDesignName>Global_Gabe</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6A406033-71B2-8062-AD3C-48184E14254F"/>
+<colUsage columnID="F8D1E48B-C75B-3B6B-F480-18D8B9F432B5"/>
+<colUsage columnID="961703C2-7345-8EF7-D3ED-532015186D3E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
