@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D6A4CDBE-512D-3C7F-44E2-563E1829A206" name="TIPO_NAVIO">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-02 22:59:55 UTC</createdTime>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<engineerTo>
+<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_tipoNavio" id="C32B3B39-2EFA-0459-4694-4693FA371344">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-02 23:03:02 UTC</createdTime>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<engineerTo>
+<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="TipoNome" id="0758BAE9-595E-2A46-5C4D-16A83ED1E33A">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-02 23:03:31 UTC</createdTime>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<engineerTo>
+<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_navio" id="77F95490-8BB4-709E-DC72-F06FC20748AD">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-02 23:13:55 UTC</createdTime>
+<generatorID>446B2A12-BB6E-7B45-74EF-40239D82B334</generatorID>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<engineerTo>
+<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+</engineerTo>
+<referedAttribute>B81477DE-E190-81BE-5504-39BA9FBC9B89</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C19EDC75-AF01-826D-C686-90B003CF91FD" name="TIPO_NAVIO PK">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-02 23:13:55 UTC</createdTime>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<engineerTo>
+<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>77F95490-8BB4-709E-DC72-F06FC20748AD</attributeRef>
+<attributeRef>C32B3B39-2EFA-0459-4694-4693FA371344</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

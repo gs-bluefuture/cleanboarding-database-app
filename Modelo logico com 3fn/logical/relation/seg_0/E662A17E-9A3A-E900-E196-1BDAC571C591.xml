@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_2" directorySegmentName="seg_0" id="E662A17E-9A3A-E900-E196-1BDAC571C591">
+<createdBy>mniac</createdBy>
+<createdTime>2024-05-29 04:38:15 UTC</createdTime>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<engineerTo>
+<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+</engineerTo>
+<sourcePk>1C42FC5B-E859-0AD0-535C-B9D98DC8A34A</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>D5AD5326-795B-9C54-3010-D132B5F768CF</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>C880B40E-FE43-5A26-F800-EC22999DDCE3</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
