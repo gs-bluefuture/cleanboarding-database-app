@@ -22,7 +22,9 @@
 <engineerTo>
 <item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
 </engineerTo>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="TipoNome" id="0758BAE9-595E-2A46-5C4D-16A83ED1E33A">

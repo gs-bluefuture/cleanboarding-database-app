@@ -91,7 +91,7 @@
 <colAssociation fkAssociation="6F62149F-BFCF-1D52-09F5-D99A6929DFC1" referredColumn="CA52FE4F-94DC-2DBF-1A76-F045B9B3A1E0"/>
 </associations>
 </Column>
-<Column name="MONITORAMENTO_OPERACAO_OPERACAO_LASTRO_id_localizacao" id="961703C2-7345-8EF7-D3ED-532015186D3E">
+<Column name="MONITORAMENTO_OPERACAO_OPERACAO_LASTRO_LOCALIZACAO_id_localizacao" id="961703C2-7345-8EF7-D3ED-532015186D3E">
 <createdBy>mniac</createdBy>
 <createdTime>2024-05-31 01:44:31 UTC</createdTime>
 <generatorID>890FA488-82C5-948D-CAFA-228AC5910F64</generatorID>
@@ -106,6 +106,57 @@
 <colAssociation fkAssociation="6F62149F-BFCF-1D52-09F5-D99A6929DFC1" referredColumn="DF55FA1F-F7B1-51B4-E23C-6D3772EF2976"/>
 </associations>
 </Column>
+<Column name="NAVIO_id_navio1" id="09A65B96-F217-9A6B-0614-154059BF01A0">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-03 13:22:07 UTC</createdTime>
+<generatorID>5FCD78A6-EB94-43E5-E8DA-EFA633D1258F</generatorID>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5B4E5785-95FA-FEA5-9D29-57781CA611B9" referredColumn="B80DE9A1-31BA-D987-6317-748DA3EF42E2"/>
+</associations>
+</Column>
+<Column name="id_monitoramento1" id="913D06FF-6098-0033-DC28-AE5FE67D939B">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-03 13:22:07 UTC</createdTime>
+<generatorID>C9BF78DE-4C7A-912F-D7CC-545AB8BD507D</generatorID>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_operacao1" id="57827962-2FF1-CD9B-BD72-3EC2EE1E3B4D">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-03 13:22:07 UTC</createdTime>
+<generatorID>F66CDE95-4EF8-F350-FFA7-F9D29B3CBDB0</generatorID>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_localizacao2" id="73FB1571-F42A-91C6-9FB7-4A1AA3A4014D">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-03 13:22:07 UTC</createdTime>
+<generatorID>CD7275DC-889D-6782-BE28-7C849D289B65</generatorID>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="3B6C31CA-0C75-4A7A-91D8-14CC2B7EE05E" name="HISTORICO_LOCALIZACAO_PK">
@@ -119,7 +170,17 @@
 <indexColumnUsage>
 <colUsage columnID="82BCD8B8-056B-BD84-1AEF-66B262608F8B"/>
 <colUsage columnID="6A4F5234-0061-9412-64AB-4B47177FF037"/>
-<colUsage columnID="50698DFC-CEE9-7A1C-BD26-B1B6D94CB4E7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="156A2721-3EE3-2954-DA50-45AC69B50E6F" name="HISTORICO_LOCALIZACAO__IDX">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-03 13:22:07 UTC</createdTime>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>461A5115-A875-522E-20E3-5FF31E792A5F</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="09A65B96-F217-9A6B-0614-154059BF01A0"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="089E7AD9-43E5-4B05-99A4-4318CF17F7B5" name="HISTORICO_LOCALIZACAO_NAVIO_FK">
@@ -155,6 +216,17 @@
 <colUsage columnID="6A406033-71B2-8062-AD3C-48184E14254F"/>
 <colUsage columnID="F8D1E48B-C75B-3B6B-F480-18D8B9F432B5"/>
 <colUsage columnID="961703C2-7345-8EF7-D3ED-532015186D3E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="314E7BB5-081E-D3CF-7D82-732F785F85AC" name="HISTORICO_LOCALIZACAO_NAVIO_FKv1">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-03 13:22:07 UTC</createdTime>
+<generatorID>461A5115-A875-522E-20E3-5FF31E792A5F</generatorID>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="09A65B96-F217-9A6B-0614-154059BF01A0"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

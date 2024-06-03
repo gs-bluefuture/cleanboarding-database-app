@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="53294CDF-6D75-FAE2-4A1F-0B72C8BB1390" containerWithKeyObject="2E4B3E54-F3F2-BA3D-1F4F-7E630C9F4B4E" localFKIndex="889ECAA9-18FC-3FDD-C843-A2885360AFF2" name="Relation_20_DESTINO_FK">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-03 13:22:07 UTC</createdTime>
+<generatorID>48D6F93D-684C-2862-4084-BCAC39DE7515</generatorID>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<referredTableLongName>DESTINO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>540FEEC2-1D25-4C43-BA2A-FE22618A36B6</referredTableID>
+<keyObject>52679720-E509-F3D0-A768-AC69681C87FD</keyObject>
+<referredKeyID>52679720-E509-F3D0-A768-AC69681C87FD</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_porto</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="331A33F4-FAE8-F880-A487-DBDCC14B332A" name="Relation_17">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-03 13:22:07 UTC</createdTime>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="OPERACAO_LASTRO_id_operacao" id="07020412-F5C3-8D92-BB1F-EAEEC8B47D56">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-03 13:22:07 UTC</createdTime>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="84391EFE-83DE-16F9-392A-A2E27E7CD2FA" referredColumn="8B2586AC-6441-A3B1-FD63-3480EDC448AD"/>
+</associations>
+</Column>
+<Column name="OPERACAO_LASTRO_LOCALIZACAO_id_localizacao" id="08620E62-A9DB-9C8A-F686-43BCEAD8078D">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-03 13:22:07 UTC</createdTime>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="84391EFE-83DE-16F9-392A-A2E27E7CD2FA" referredColumn="1BD17CFF-F714-1AA0-6554-23445124462F"/>
+</associations>
+</Column>
+<Column name="NAVIO_id_navio" id="F3D5ADAD-0804-EDD7-7A3A-EF1F14C760CA">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-03 13:22:07 UTC</createdTime>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AAA1F447-EEEF-BDAA-E1F4-E0DE24ED0178" referredColumn="B80DE9A1-31BA-D987-6317-748DA3EF42E2"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BE4B7B29-4BC2-A098-AF65-3CE17AF28AFF" name="Relation_17_PK">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-03 13:22:07 UTC</createdTime>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="07020412-F5C3-8D92-BB1F-EAEEC8B47D56"/>
+<colUsage columnID="08620E62-A9DB-9C8A-F686-43BCEAD8078D"/>
+<colUsage columnID="F3D5ADAD-0804-EDD7-7A3A-EF1F14C760CA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2B173CB4-CAB4-CA58-8DFD-1D76354F235E" name="Relation_17_OPERACAO_LASTRO_FK">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-03 13:22:07 UTC</createdTime>
+<generatorID>529FF8B1-E7BB-7FA2-47F7-3B9BF0FDCE0E</generatorID>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="07020412-F5C3-8D92-BB1F-EAEEC8B47D56"/>
+<colUsage columnID="08620E62-A9DB-9C8A-F686-43BCEAD8078D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EA375F79-01A6-94E2-9962-B07B2148A67D" name="Relation_17_NAVIO_FK">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-03 13:22:07 UTC</createdTime>
+<generatorID>529FF8B1-E7BB-7FA2-47F7-3B9BF0FDCE0E</generatorID>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F3D5ADAD-0804-EDD7-7A3A-EF1F14C760CA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

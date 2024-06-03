@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="84391EFE-83DE-16F9-392A-A2E27E7CD2FA" containerWithKeyObject="331A33F4-FAE8-F880-A487-DBDCC14B332A" localFKIndex="2B173CB4-CAB4-CA58-8DFD-1D76354F235E" name="Relation_17_OPERACAO_LASTRO_FK">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-03 13:22:07 UTC</createdTime>
+<generatorID>529FF8B1-E7BB-7FA2-47F7-3B9BF0FDCE0E</generatorID>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<referredTableLongName>OPERACAO_LASTRO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>BF178DCA-2454-E427-42C0-D0D7076EF380</referredTableID>
+<keyObject>96936845-3D63-DD72-F307-CEC0F74C712E</keyObject>
+<referredKeyID>96936845-3D63-DD72-F307-CEC0F74C712E</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_operacao,LOCALIZACAO_id_localizacao</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

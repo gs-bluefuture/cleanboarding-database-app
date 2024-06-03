@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="AAA1F447-EEEF-BDAA-E1F4-E0DE24ED0178" containerWithKeyObject="331A33F4-FAE8-F880-A487-DBDCC14B332A" localFKIndex="EA375F79-01A6-94E2-9962-B07B2148A67D" name="Relation_17_NAVIO_FK">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-03 13:22:07 UTC</createdTime>
+<generatorID>529FF8B1-E7BB-7FA2-47F7-3B9BF0FDCE0E</generatorID>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<referredTableLongName>NAVIO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>C4A71B1D-23A4-7A24-1D44-F04B54DD754B</referredTableID>
+<keyObject>CA12F7DE-4478-88CC-850D-6705EDC31E63</keyObject>
+<referredKeyID>CA12F7DE-4478-88CC-850D-6705EDC31E63</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_navio</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

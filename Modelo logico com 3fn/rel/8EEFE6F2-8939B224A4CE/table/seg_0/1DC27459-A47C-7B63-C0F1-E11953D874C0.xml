@@ -1,17 +1,17 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C4A71B1D-23A4-7A24-1D44-F04B54DD754B" name="NAVIO">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1DC27459-A47C-7B63-C0F1-E11953D874C0" name="TIPO_NAVIO">
 <createdBy>mniac</createdBy>
-<createdTime>2024-05-31 01:44:31 UTC</createdTime>
-<generatorID>D5AD5326-795B-9C54-3010-D132B5F768CF</generatorID>
+<createdTime>2024-06-03 13:22:07 UTC</createdTime>
+<generatorID>D6A4CDBE-512D-3C7F-44E2-563E1829A206</generatorID>
 <ownerDesignName>Modelo logico com 3fn</ownerDesignName>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="id_navio" id="B80DE9A1-31BA-D987-6317-748DA3EF42E2">
+<Column name="id_tipoNavio" id="B978A5C0-F369-05CD-E281-267BB2FB2AB0">
 <createdBy>mniac</createdBy>
-<createdTime>2024-05-31 01:44:31 UTC</createdTime>
-<generatorID>B81477DE-E190-81BE-5504-39BA9FBC9B89</generatorID>
+<createdTime>2024-06-03 13:22:07 UTC</createdTime>
+<generatorID>C32B3B39-2EFA-0459-4694-4693FA371344</generatorID>
 <ownerDesignName>Modelo logico com 3fn</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -19,10 +19,10 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="nome" id="C00DAE7D-6FE3-E9F8-1501-F0B00ED57B38">
+<Column name="TipoNome" id="4567D416-AEC7-8E7F-4159-7A3F029A8D64">
 <createdBy>mniac</createdBy>
-<createdTime>2024-05-31 01:44:31 UTC</createdTime>
-<generatorID>E3489929-4A8C-3527-89C3-568255F21A0A</generatorID>
+<createdTime>2024-06-03 13:22:07 UTC</createdTime>
+<generatorID>0758BAE9-595E-2A46-5C4D-16A83ED1E33A</generatorID>
 <ownerDesignName>Modelo logico com 3fn</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -32,35 +32,10 @@
 <ownDataTypeParameters>30,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="tipo_navio" id="DBD10C02-55E9-D9CC-E629-B43E3FE92643">
-<createdBy>mniac</createdBy>
-<createdTime>2024-05-31 01:44:31 UTC</createdTime>
-<generatorID>123EE31D-4100-8160-38CE-A4FF2DD9728B</generatorID>
-<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>30</dataTypeSize>
-<ownDataTypeParameters>30,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="capacidade_lastro" id="5C150C35-08F3-A443-B7F1-F420E001CC4E">
-<createdBy>mniac</createdBy>
-<createdTime>2024-05-31 01:44:31 UTC</createdTime>
-<generatorID>41AC382D-C210-3E75-EB22-2147F7F37D53</generatorID>
-<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT026</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="MONITORAMENTO_OPERACAO_id_monitoramento" id="3577D78F-E216-B0E8-DDB8-98444AC8C128">
+<Column name="NAVIO_id_navio" id="00E8E35C-29DF-1358-CFD7-184AE8EA489B">
 <createdBy>mniac</createdBy>
 <createdTime>2024-06-03 13:22:07 UTC</createdTime>
-<generatorID>2F483E1E-DF0F-A511-D087-55537DE7A125</generatorID>
+<generatorID>77F95490-8BB4-709E-DC72-F06FC20748AD</generatorID>
 <ownerDesignName>Modelo logico com 3fn</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -69,13 +44,13 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="CBF37575-B513-E922-540F-20C7F2F1957E" referredColumn="F5F04A89-7655-85AD-48A0-0E854DB3704A"/>
+<colAssociation fkAssociation="CB1456B7-0D4C-1D77-2AA1-DE23EBC1707E" referredColumn="B80DE9A1-31BA-D987-6317-748DA3EF42E2"/>
 </associations>
 </Column>
-<Column name="MONITORAMENTO_OPERACAO_OPERACAO_LASTRO_id_operacao" id="D887B293-CB06-F5E8-2E70-BB4CCB523CF2">
+<Column name="id_monitoramento" id="F66A125D-7EA5-4D13-1B15-419E23060B5C">
 <createdBy>mniac</createdBy>
 <createdTime>2024-06-03 13:22:07 UTC</createdTime>
-<generatorID>51EF90DC-054D-05B2-F102-8B66E275450D</generatorID>
+<generatorID>C77A4C6F-BFB6-BB13-EEC6-AA584568A395</generatorID>
 <ownerDesignName>Modelo logico com 3fn</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -83,14 +58,11 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="CBF37575-B513-E922-540F-20C7F2F1957E" referredColumn="CA52FE4F-94DC-2DBF-1A76-F045B9B3A1E0"/>
-</associations>
 </Column>
-<Column name="MONITORAMENTO_OPERACAO_OPERACAO_LASTRO_LOCALIZACAO_id_localizacao" id="F0C6C308-647B-9E69-8BAD-74F2C6BD2039">
+<Column name="id_operacao" id="A1258EEA-748A-2C1F-126F-C1961950A906">
 <createdBy>mniac</createdBy>
 <createdTime>2024-06-03 13:22:07 UTC</createdTime>
-<generatorID>59883BC8-B05A-4B3C-8B0F-F2860556E180</generatorID>
+<generatorID>A5FD7DA7-22E2-14A1-A80A-8E4D3C381D78</generatorID>
 <ownerDesignName>Modelo logico com 3fn</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -98,35 +70,46 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="CBF37575-B513-E922-540F-20C7F2F1957E" referredColumn="DF55FA1F-F7B1-51B4-E23C-6D3772EF2976"/>
-</associations>
+</Column>
+<Column name="id_localizacao" id="1570270C-14F4-2D8C-2923-E1B916422A2C">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-03 13:22:07 UTC</createdTime>
+<generatorID>64157C49-B38E-9512-7676-2976EDC9CA8F</generatorID>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="CA12F7DE-4478-88CC-850D-6705EDC31E63" name="NAVIO_PK">
+<ind_PK_UK id="E2F72AED-26E8-35FF-6CCC-C09602EE1231" name="TIPO_NAVIO_PK">
 <createdBy>mniac</createdBy>
-<createdTime>2024-05-31 01:44:31 UTC</createdTime>
-<generatorID>1C42FC5B-E859-0AD0-535C-B9D98DC8A34A</generatorID>
+<createdTime>2024-06-03 13:22:07 UTC</createdTime>
+<generatorID>C19EDC75-AF01-826D-C686-90B003CF91FD</generatorID>
 <ownerDesignName>Modelo logico com 3fn</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="B80DE9A1-31BA-D987-6317-748DA3EF42E2"/>
+<colUsage columnID="00E8E35C-29DF-1358-CFD7-184AE8EA489B"/>
+<colUsage columnID="F66A125D-7EA5-4D13-1B15-419E23060B5C"/>
+<colUsage columnID="A1258EEA-748A-2C1F-126F-C1961950A906"/>
+<colUsage columnID="1570270C-14F4-2D8C-2923-E1B916422A2C"/>
+<colUsage columnID="B978A5C0-F369-05CD-E281-267BB2FB2AB0"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="399011D3-793F-400B-0DFC-92156D4BC6FA" name="NAVIO_MONITORAMENTO_OPERACAO_FK">
+<ind_PK_UK id="A9648C2E-7906-9754-AFCE-3B380F07246E" name="TIPO_NAVIO_NAVIO_FK">
 <createdBy>mniac</createdBy>
 <createdTime>2024-06-03 13:22:07 UTC</createdTime>
-<generatorID>66561B1D-7D39-B058-5172-9ECAABFB4414</generatorID>
+<generatorID>446B2A12-BB6E-7B45-74EF-40239D82B334</generatorID>
 <ownerDesignName>Modelo logico com 3fn</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="3577D78F-E216-B0E8-DDB8-98444AC8C128"/>
-<colUsage columnID="D887B293-CB06-F5E8-2E70-BB4CCB523CF2"/>
-<colUsage columnID="F0C6C308-647B-9E69-8BAD-74F2C6BD2039"/>
+<colUsage columnID="00E8E35C-29DF-1358-CFD7-184AE8EA489B"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>
