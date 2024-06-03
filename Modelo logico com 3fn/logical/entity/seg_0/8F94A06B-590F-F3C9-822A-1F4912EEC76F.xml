@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8F94A06B-590F-F3C9-822A-1F4912EEC76F" name="PORTO">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8F94A06B-590F-F3C9-822A-1F4912EEC76F" name="DESTINO">
 <createdBy>mniac</createdBy>
 <createdTime>2024-06-02 22:57:47 UTC</createdTime>
 <ownerDesignName>Modelo logico com 3fn</ownerDesignName>

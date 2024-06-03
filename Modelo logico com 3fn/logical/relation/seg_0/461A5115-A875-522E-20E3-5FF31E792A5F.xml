@@ -1,18 +1,18 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_10" directorySegmentName="seg_0" id="FA58E244-A262-F12F-14D5-20D806A4AAAF">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_21" directorySegmentName="seg_0" id="461A5115-A875-522E-20E3-5FF31E792A5F">
 <createdBy>mniac</createdBy>
-<createdTime>2024-05-29 04:57:58 UTC</createdTime>
+<createdTime>2024-06-03 12:56:02 UTC</createdTime>
 <ownerDesignName>Modelo logico com 3fn</ownerDesignName>
 <engineerTo>
 <item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
 </engineerTo>
 <sourcePk>1C42FC5B-E859-0AD0-535C-B9D98DC8A34A</sourcePk>
-<identifying>true</identifying>
+<identifying>false</identifying>
 <optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
 <sourceEntity>D5AD5326-795B-9C54-3010-D132B5F768CF</sourceEntity>
-<targetCardinalityString>*</targetCardinalityString>
+<targetCardinalityString>1</targetCardinalityString>
 <targetEntity>6D7B9B73-D26A-C28A-B3B2-06A21E05C745</targetEntity>
 <transferable>true</transferable>
 <deleteRule>NO ACTION</deleteRule>

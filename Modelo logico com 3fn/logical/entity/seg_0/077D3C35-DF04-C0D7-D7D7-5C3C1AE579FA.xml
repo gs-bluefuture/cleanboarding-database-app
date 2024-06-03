@@ -68,20 +68,6 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_porto" id="78D398CA-FEBF-3A56-508C-651B56504638">
-<createdBy>mniac</createdBy>
-<createdTime>2024-06-02 23:16:41 UTC</createdTime>
-<generatorID>879865F4-2DCB-C630-24C1-AB7E6AD67080</generatorID>
-<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
-<engineerTo>
-<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
-</engineerTo>
-<referedAttribute>4C042BFE-C15E-C19E-2C7A-7E0B2FCF454B</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="2CE8CC8A-A6EE-5927-F1E9-4A981ED91716" name="TIPO_OPERACAO PK">
@@ -95,7 +81,6 @@
 <usedAttributes>
 <attributeRef>C3D88D3C-AAAB-4E16-1426-DFC7254C48FC</attributeRef>
 <attributeRef>8021996D-B426-A6A4-B81C-5C03E754ABB7</attributeRef>
-<attributeRef>78D398CA-FEBF-3A56-508C-651B56504638</attributeRef>
 <attributeRef>8FAC3B45-F942-E8AE-9B05-83FBAB9736C9</attributeRef>
 </usedAttributes>
 </identifier>

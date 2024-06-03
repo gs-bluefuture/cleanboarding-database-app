@@ -68,20 +68,6 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_navio" id="96892466-A6D8-5650-774F-FFD9DB5984A1">
-<createdBy>mniac</createdBy>
-<createdTime>2024-05-29 04:57:58 UTC</createdTime>
-<generatorID>FA58E244-A262-F12F-14D5-20D806A4AAAF</generatorID>
-<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
-<engineerTo>
-<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
-</engineerTo>
-<referedAttribute>B81477DE-E190-81BE-5504-39BA9FBC9B89</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="id_operacao" id="9D1ECD8C-2369-59D7-081C-44224B6E5213">
 <createdBy>mniac</createdBy>
 <createdTime>2024-05-29 04:58:51 UTC</createdTime>
@@ -110,29 +96,57 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_porto" id="48AE382A-522B-6E14-2ABE-E267FF901467">
+<Attribute name="id_navio" id="5FCD78A6-EB94-43E5-E8DA-EFA633D1258F">
 <createdBy>mniac</createdBy>
-<createdTime>2024-06-02 23:16:41 UTC</createdTime>
-<generatorID>FF16182C-3C81-D698-379F-4C0B4239F26D</generatorID>
+<createdTime>2024-06-03 12:56:02 UTC</createdTime>
+<generatorID>461A5115-A875-522E-20E3-5FF31E792A5F</generatorID>
 <ownerDesignName>Modelo logico com 3fn</ownerDesignName>
 <engineerTo>
 <item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
 </engineerTo>
-<referedAttribute>C688A64B-DC0F-C35F-84E7-38597F7A97EA</referedAttribute>
+<referedAttribute>B81477DE-E190-81BE-5504-39BA9FBC9B89</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_porto1" id="9506F41A-C7E4-5D33-369E-4ED3A989BF09">
+<Attribute name="id_monitoramento1" id="C9BF78DE-4C7A-912F-D7CC-545AB8BD507D">
 <createdBy>mniac</createdBy>
-<createdTime>2024-06-02 23:16:41 UTC</createdTime>
-<generatorID>43F35DF2-4DC0-DABC-960B-51DAF85ED933</generatorID>
+<createdTime>2024-06-03 12:56:02 UTC</createdTime>
+<generatorID>461A5115-A875-522E-20E3-5FF31E792A5F</generatorID>
 <ownerDesignName>Modelo logico com 3fn</ownerDesignName>
 <engineerTo>
 <item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
 </engineerTo>
-<referedAttribute>0E1A96D5-9A3F-5694-2C65-D9068A5E4F2E</referedAttribute>
+<referedAttribute>2F483E1E-DF0F-A511-D087-55537DE7A125</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_operacao1" id="F66CDE95-4EF8-F350-FFA7-F9D29B3CBDB0">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-03 12:56:02 UTC</createdTime>
+<generatorID>461A5115-A875-522E-20E3-5FF31E792A5F</generatorID>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<engineerTo>
+<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+</engineerTo>
+<referedAttribute>51EF90DC-054D-05B2-F102-8B66E275450D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_localizacao2" id="CD7275DC-889D-6782-BE28-7C849D289B65">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-03 12:56:02 UTC</createdTime>
+<generatorID>461A5115-A875-522E-20E3-5FF31E792A5F</generatorID>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<engineerTo>
+<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+</engineerTo>
+<referedAttribute>59883BC8-B05A-4B3C-8B0F-F2860556E180</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -150,9 +164,7 @@
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>AE0A2735-CB0A-E322-8B27-F11BBCA54EDA</attributeRef>
-<attributeRef>48AE382A-522B-6E14-2ABE-E267FF901467</attributeRef>
 <attributeRef>A1004674-DDFD-FDE1-8F4D-F1A020D84B44</attributeRef>
-<attributeRef>96892466-A6D8-5650-774F-FFD9DB5984A1</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

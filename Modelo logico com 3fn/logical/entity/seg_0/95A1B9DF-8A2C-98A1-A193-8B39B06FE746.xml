@@ -53,10 +53,10 @@
 <logicalDatatype>LOGDT026</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_porto" id="C688A64B-DC0F-C35F-84E7-38597F7A97EA">
+<Attribute name="id_porto" id="9134DAD5-23BA-330C-52DF-5E0934553BBD">
 <createdBy>mniac</createdBy>
-<createdTime>2024-06-02 23:16:41 UTC</createdTime>
-<generatorID>3613EA68-4C50-EC69-DB1C-9E2C9CF96301</generatorID>
+<createdTime>2024-06-03 12:51:55 UTC</createdTime>
+<generatorID>6E36D83A-57F4-8D99-7CF5-9999100A2A2B</generatorID>
 <ownerDesignName>Modelo logico com 3fn</ownerDesignName>
 <engineerTo>
 <item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
@@ -79,7 +79,6 @@
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>0205A009-931E-BDF3-20FB-C09551A54AB0</attributeRef>
-<attributeRef>C688A64B-DC0F-C35F-84E7-38597F7A97EA</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

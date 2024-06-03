@@ -15,20 +15,6 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id_navio" id="D6751BF0-3415-0741-7A65-0BC04D34809A">
-<createdBy>mniac</createdBy>
-<createdTime>2024-05-29 04:42:24 UTC</createdTime>
-<generatorID>E662A17E-9A3A-E900-E196-1BDAC571C591</generatorID>
-<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
-<engineerTo>
-<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
-</engineerTo>
-<referedAttribute>B81477DE-E190-81BE-5504-39BA9FBC9B89</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="id_operacao" id="3272CA82-7163-5E22-718E-BA726FF16379">
 <createdBy>mniac</createdBy>
 <createdTime>2024-05-29 04:44:34 UTC</createdTime>
@@ -81,20 +67,6 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_porto" id="4C042BFE-C15E-C19E-2C7A-7E0B2FCF454B">
-<createdBy>mniac</createdBy>
-<createdTime>2024-06-02 23:16:41 UTC</createdTime>
-<generatorID>82CD91EA-C1D1-6C74-F05D-F540B63BA00E</generatorID>
-<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
-<engineerTo>
-<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
-</engineerTo>
-<referedAttribute>C688A64B-DC0F-C35F-84E7-38597F7A97EA</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="AFDF9DB6-F432-437A-DE0D-4691391A097E" name="OPERACAO PK">
@@ -109,7 +81,6 @@
 <usedAttributes>
 <attributeRef>3272CA82-7163-5E22-718E-BA726FF16379</attributeRef>
 <attributeRef>A57C2962-2AE0-8134-5719-5389CF74F7BE</attributeRef>
-<attributeRef>4C042BFE-C15E-C19E-2C7A-7E0B2FCF454B</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

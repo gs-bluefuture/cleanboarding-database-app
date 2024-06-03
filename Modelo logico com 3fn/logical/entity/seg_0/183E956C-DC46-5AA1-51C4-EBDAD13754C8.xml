@@ -15,20 +15,6 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id_navio" id="7B99A27C-582E-86A7-41CB-BF86F21BEB30">
-<createdBy>mniac</createdBy>
-<createdTime>2024-05-29 04:42:24 UTC</createdTime>
-<generatorID>F6C2C829-2053-94BF-5D1E-BFCF8B6FF6E4</generatorID>
-<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
-<engineerTo>
-<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
-</engineerTo>
-<referedAttribute>B81477DE-E190-81BE-5504-39BA9FBC9B89</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="id_monitoramento" id="26D9B704-4090-31AD-0155-203D6DC1BB9D">
 <createdBy>mniac</createdBy>
 <createdTime>2024-05-29 04:53:42 UTC</createdTime>
@@ -108,20 +94,6 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_porto" id="0E1A96D5-9A3F-5694-2C65-D9068A5E4F2E">
-<createdBy>mniac</createdBy>
-<createdTime>2024-06-02 23:16:41 UTC</createdTime>
-<generatorID>343DE173-9AB7-EA5C-FFED-3A82B9772F1F</generatorID>
-<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
-<engineerTo>
-<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
-</engineerTo>
-<referedAttribute>4C042BFE-C15E-C19E-2C7A-7E0B2FCF454B</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="CC84042E-D1F8-3D5C-3ECA-F3A24C64BE93" name="MONITORAMENTO_NAVIO PK">
@@ -136,7 +108,6 @@
 <attributeRef>26D9B704-4090-31AD-0155-203D6DC1BB9D</attributeRef>
 <attributeRef>AFB3E6FC-5273-6231-0AFF-68B43DC19B00</attributeRef>
 <attributeRef>927C85F4-FFDA-19A7-5CE6-70F793E8B2CD</attributeRef>
-<attributeRef>0E1A96D5-9A3F-5694-2C65-D9068A5E4F2E</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

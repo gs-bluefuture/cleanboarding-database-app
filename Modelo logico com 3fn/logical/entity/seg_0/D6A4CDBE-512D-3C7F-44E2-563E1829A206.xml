@@ -53,6 +53,48 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="id_monitoramento" id="C77A4C6F-BFB6-BB13-EEC6-AA584568A395">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-03 12:49:30 UTC</createdTime>
+<generatorID>446B2A12-BB6E-7B45-74EF-40239D82B334</generatorID>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<engineerTo>
+<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+</engineerTo>
+<referedAttribute>2F483E1E-DF0F-A511-D087-55537DE7A125</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_operacao" id="A5FD7DA7-22E2-14A1-A80A-8E4D3C381D78">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-03 12:49:30 UTC</createdTime>
+<generatorID>446B2A12-BB6E-7B45-74EF-40239D82B334</generatorID>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<engineerTo>
+<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+</engineerTo>
+<referedAttribute>51EF90DC-054D-05B2-F102-8B66E275450D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_localizacao" id="64157C49-B38E-9512-7676-2976EDC9CA8F">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-03 12:49:30 UTC</createdTime>
+<generatorID>446B2A12-BB6E-7B45-74EF-40239D82B334</generatorID>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<engineerTo>
+<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+</engineerTo>
+<referedAttribute>59883BC8-B05A-4B3C-8B0F-F2860556E180</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="C19EDC75-AF01-826D-C686-90B003CF91FD" name="TIPO_NAVIO PK">
@@ -65,6 +107,9 @@
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>77F95490-8BB4-709E-DC72-F06FC20748AD</attributeRef>
+<attributeRef>C77A4C6F-BFB6-BB13-EEC6-AA584568A395</attributeRef>
+<attributeRef>A5FD7DA7-22E2-14A1-A80A-8E4D3C381D78</attributeRef>
+<attributeRef>64157C49-B38E-9512-7676-2976EDC9CA8F</attributeRef>
 <attributeRef>C32B3B39-2EFA-0459-4694-4693FA371344</attributeRef>
 </usedAttributes>
 </identifier>
