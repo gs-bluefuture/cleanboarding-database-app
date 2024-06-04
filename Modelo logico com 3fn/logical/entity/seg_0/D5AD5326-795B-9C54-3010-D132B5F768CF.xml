@@ -4,7 +4,7 @@
 <createdTime>2024-05-29 04:35:43 UTC</createdTime>
 <ownerDesignName>Modelo logico com 3fn</ownerDesignName>
 <engineerTo>
-<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+<item key="835E5B26-B1C1-A359-0794-CB0E4B2419DC" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -20,7 +20,7 @@
 <createdTime>2024-05-29 04:39:31 UTC</createdTime>
 <ownerDesignName>Modelo logico com 3fn</ownerDesignName>
 <engineerTo>
-<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+<item key="835E5B26-B1C1-A359-0794-CB0E4B2419DC" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -32,7 +32,7 @@
 <createdTime>2024-05-29 04:39:41 UTC</createdTime>
 <ownerDesignName>Modelo logico com 3fn</ownerDesignName>
 <engineerTo>
-<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+<item key="835E5B26-B1C1-A359-0794-CB0E4B2419DC" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -46,7 +46,7 @@
 <createdTime>2024-05-29 04:40:35 UTC</createdTime>
 <ownerDesignName>Modelo logico com 3fn</ownerDesignName>
 <engineerTo>
-<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+<item key="835E5B26-B1C1-A359-0794-CB0E4B2419DC" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -54,43 +54,15 @@
 <logicalDatatype>LOGDT026</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_monitoramento" id="2F483E1E-DF0F-A511-D087-55537DE7A125">
+<Attribute name="id_monitoramento" id="BFA3E979-3C64-2378-38B8-068C9EDD76CD">
 <createdBy>mniac</createdBy>
-<createdTime>2024-06-03 12:49:30 UTC</createdTime>
-<generatorID>66561B1D-7D39-B058-5172-9ECAABFB4414</generatorID>
+<createdTime>2024-06-04 17:21:01 UTC</createdTime>
+<generatorID>0ADBFAE9-4907-6517-AD95-8732AA095635</generatorID>
 <ownerDesignName>Modelo logico com 3fn</ownerDesignName>
 <engineerTo>
-<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+<item key="835E5B26-B1C1-A359-0794-CB0E4B2419DC" value="true"/>
 </engineerTo>
 <referedAttribute>26D9B704-4090-31AD-0155-203D6DC1BB9D</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="id_operacao" id="51EF90DC-054D-05B2-F102-8B66E275450D">
-<createdBy>mniac</createdBy>
-<createdTime>2024-06-03 12:49:30 UTC</createdTime>
-<generatorID>66561B1D-7D39-B058-5172-9ECAABFB4414</generatorID>
-<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
-<engineerTo>
-<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
-</engineerTo>
-<referedAttribute>AFB3E6FC-5273-6231-0AFF-68B43DC19B00</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="id_localizacao" id="59883BC8-B05A-4B3C-8B0F-F2860556E180">
-<createdBy>mniac</createdBy>
-<createdTime>2024-06-03 12:49:30 UTC</createdTime>
-<generatorID>66561B1D-7D39-B058-5172-9ECAABFB4414</generatorID>
-<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
-<engineerTo>
-<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
-</engineerTo>
-<referedAttribute>927C85F4-FFDA-19A7-5CE6-70F793E8B2CD</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -102,16 +74,12 @@
 <createdBy>mniac</createdBy>
 <createdTime>2024-05-29 04:42:21 UTC</createdTime>
 <ownerDesignName>Modelo logico com 3fn</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="false"/>
+<item key="835E5B26-B1C1-A359-0794-CB0E4B2419DC" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>B81477DE-E190-81BE-5504-39BA9FBC9B89</attributeRef>
-<attributeRef>2F483E1E-DF0F-A511-D087-55537DE7A125</attributeRef>
-<attributeRef>51EF90DC-054D-05B2-F102-8B66E275450D</attributeRef>
-<attributeRef>59883BC8-B05A-4B3C-8B0F-F2860556E180</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

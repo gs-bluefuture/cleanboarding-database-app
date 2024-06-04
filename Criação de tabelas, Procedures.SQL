@@ -1,198 +1,244 @@
-CREATE TABLE historico_localizacao (
-    localizacao_id_localizacao                                        NUMBER NOT NULL,
-    id_historico                                                      NUMBER NOT NULL,
-    historico_timestamp                                               TIMESTAMP WITH LOCAL TIME ZONE, 
-    monitoramento_operacao_id_monitoramento                           NUMBER NOT NULL,
-    navio_id_navio                                                    NUMBER NOT NULL, 
-    monitoramento_operacao_operacao_lastro_id_operacao                NUMBER NOT NULL, 
-    monitoramento_operacao_operacao_lastro_localizacao_id_localizacao NUMBER NOT NULL
+CREATE TABLE destino (
+    id_porto NUMBER NOT NULL,
+    nome     VARCHAR2(30)
 );
 
-ALTER TABLE historico_localizacao
-    ADD CONSTRAINT historico_localizacao_pk PRIMARY KEY ( localizacao_id_localizacao,
-                                                          id_historico,
-                                                          navio_id_navio );
+ALTER TABLE destino ADD CONSTRAINT destino_pk PRIMARY KEY ( id_porto );
+
+CREATE TABLE historico_localizacao (
+    id_historico                            NUMBER NOT NULL,
+    historico_timestamp                     TIMESTAMP WITH LOCAL TIME ZONE, 
+    monitoramento_operacao_id_monitoramento NUMBER NOT NULL,
+    navio_id_navio                          NUMBER NOT NULL,
+    localizacao_id_localizacao              NUMBER NOT NULL
+);
+
+CREATE UNIQUE INDEX historico_localizacao__idx ON
+    historico_localizacao (
+        navio_id_navio
+    ASC );
+
+ALTER TABLE historico_localizacao ADD CONSTRAINT historico_localizacao_pk PRIMARY KEY ( id_historico );
 
 CREATE TABLE localizacao (
-    id_localizacao NUMBER NOT NULL,
-    latitude       NUMBER,
-    longitude      NUMBER,
-    porto          VARCHAR2(30) 
+    id_localizacao   NUMBER NOT NULL,
+    latitude         NUMBER,
+    longitude        NUMBER,
+    destino_id_porto NUMBER NOT NULL
 );
+
+CREATE UNIQUE INDEX localizacao__idx ON
+    localizacao (
+        destino_id_porto
+    ASC );
 
 ALTER TABLE localizacao ADD CONSTRAINT localizacao_pk PRIMARY KEY ( id_localizacao );
 
 CREATE TABLE monitoramento_operacao (
-    navio_id_navio                             NUMBER NOT NULL,
-    id_monitoramento                           NUMBER NOT NULL,
-    nome_metrica                               VARCHAR2(30),
-    valor_metrica                              NUMBER,
-    metrica_timestamp                          TIMESTAMP WITH LOCAL TIME ZONE,
-    operacao_lastro_id_operacao                NUMBER NOT NULL, 
-    operacao_lastro_localizacao_id_localizacao NUMBER NOT NULL
+    id_monitoramento            NUMBER NOT NULL,
+    nome_metrica                VARCHAR2(30),
+    valor_metrica               NUMBER,
+    metrica_timestamp           TIMESTAMP WITH LOCAL TIME ZONE,
+    operacao_lastro_id_operacao NUMBER NOT NULL
 );
 
-ALTER TABLE monitoramento_operacao
-    ADD CONSTRAINT monitoramento_operacao_pk PRIMARY KEY ( id_monitoramento,
-                                                           operacao_lastro_id_operacao,
-                                                           operacao_lastro_localizacao_id_localizacao );
+ALTER TABLE monitoramento_operacao ADD CONSTRAINT monitoramento_operacao_pk PRIMARY KEY ( id_monitoramento );
 
 CREATE TABLE navio (
-    id_navio          NUMBER NOT NULL,
-    nome              VARCHAR2(30),
-    tipo_navio        VARCHAR2(30),
-    capacidade_lastro NUMBER
+    id_navio                                NUMBER NOT NULL,
+    nome                                    VARCHAR2(30),
+    capacidade_lastro                       NUMBER, 
+    monitoramento_operacao_id_monitoramento NUMBER NOT NULL
 );
 
 ALTER TABLE navio ADD CONSTRAINT navio_pk PRIMARY KEY ( id_navio );
 
 CREATE TABLE operacao_lastro (
-    navio_id_navio             NUMBER NOT NULL,
     id_operacao                NUMBER NOT NULL,
-    tipo_operacao              VARCHAR2(30),
     quantidade_agua            NUMBER,
     operecao_timestamp         TIMESTAMP WITH LOCAL TIME ZONE,
     localizacao_id_localizacao NUMBER NOT NULL
 );
 
-ALTER TABLE operacao_lastro ADD CONSTRAINT operacao_lastro_pk PRIMARY KEY ( id_operacao,
-                                                                            localizacao_id_localizacao );
+ALTER TABLE operacao_lastro ADD CONSTRAINT operacao_lastro_pk PRIMARY KEY ( id_operacao );
 
+CREATE TABLE relation_17 (
+    operacao_lastro_id_operacao NUMBER NOT NULL,
+    navio_id_navio              NUMBER NOT NULL
+);
 
+ALTER TABLE relation_17 ADD CONSTRAINT relation_17_pk PRIMARY KEY ( operacao_lastro_id_operacao,
+                                                                    navio_id_navio );
+
+CREATE TABLE relation_20 (
+    destino_id_porto NUMBER NOT NULL,
+    navio_id_navio   NUMBER NOT NULL
+);
+
+ALTER TABLE relation_20 ADD CONSTRAINT relation_20_pk PRIMARY KEY ( destino_id_porto,
+                                                                    navio_id_navio );
+
+CREATE TABLE tipo_navio (
+    id_tiponavio   NUMBER NOT NULL,
+    tiponome       VARCHAR2(30),
+    navio_id_navio NUMBER NOT NULL
+);
+
+ALTER TABLE tipo_navio ADD CONSTRAINT tipo_navio_pk PRIMARY KEY ( id_tiponavio );
+
+CREATE TABLE tipo_operacao (
+    id_tipooperacao             NUMBER NOT NULL,
+    nomeoperacao                VARCHAR2(30),
+    operacao_lastro_id_operacao NUMBER NOT NULL
+);
+
+ALTER TABLE tipo_operacao ADD CONSTRAINT tipo_operacao_pk PRIMARY KEY ( id_tipooperacao );
+
+--  ERROR: FK name length exceeds maximum allowed length(30) 
 ALTER TABLE historico_localizacao
     ADD CONSTRAINT historico_localizacao_localizacao_fk FOREIGN KEY ( localizacao_id_localizacao )
         REFERENCES localizacao ( id_localizacao );
 
-
+--  ERROR: FK name length exceeds maximum allowed length(30) 
 ALTER TABLE historico_localizacao
-    ADD CONSTRAINT historico_localizacao_monitoramento_operacao_fk FOREIGN KEY ( monitoramento_operacao_id_monitoramento,
-                                                                                 monitoramento_operacao_operacao_lastro_id_operacao,
-                                                                                 monitoramento_operacao_operacao_lastro_localizacao_id_localizacao
-                                                                                 )
-        REFERENCES monitoramento_operacao ( id_monitoramento,
-                                            operacao_lastro_id_operacao,
-                                            operacao_lastro_localizacao_id_localizacao );
+    ADD CONSTRAINT historico_localizacao_monitoramento_operacao_fk FOREIGN KEY ( monitoramento_operacao_id_monitoramento )
+        REFERENCES monitoramento_operacao ( id_monitoramento );
 
 ALTER TABLE historico_localizacao
     ADD CONSTRAINT historico_localizacao_navio_fk FOREIGN KEY ( navio_id_navio )
         REFERENCES navio ( id_navio );
 
+ALTER TABLE localizacao
+    ADD CONSTRAINT localizacao_destino_fk FOREIGN KEY ( destino_id_porto )
+        REFERENCES destino ( id_porto );
+
 
 ALTER TABLE monitoramento_operacao
-    ADD CONSTRAINT monitoramento_operacao_navio_fk FOREIGN KEY ( navio_id_navio )
-        REFERENCES navio ( id_navio );
+    ADD CONSTRAINT monitoramento_operacao_operacao_lastro_fk FOREIGN KEY ( operacao_lastro_id_operacao )
+        REFERENCES operacao_lastro ( id_operacao );
 
-
-ALTER TABLE monitoramento_operacao
-    ADD CONSTRAINT monitoramento_operacao_operacao_lastro_fk FOREIGN KEY ( operacao_lastro_id_operacao,
-                                                                           operacao_lastro_localizacao_id_localizacao )
-        REFERENCES operacao_lastro ( id_operacao,
-                                     localizacao_id_localizacao );
+ 
+ALTER TABLE navio
+    ADD CONSTRAINT navio_monitoramento_operacao_fk FOREIGN KEY ( monitoramento_operacao_id_monitoramento )
+        REFERENCES monitoramento_operacao ( id_monitoramento );
 
 ALTER TABLE operacao_lastro
     ADD CONSTRAINT operacao_lastro_localizacao_fk FOREIGN KEY ( localizacao_id_localizacao )
         REFERENCES localizacao ( id_localizacao );
 
-ALTER TABLE operacao_lastro
-    ADD CONSTRAINT operacao_lastro_navio_fk FOREIGN KEY ( navio_id_navio )
+ALTER TABLE relation_17
+    ADD CONSTRAINT relation_17_navio_fk FOREIGN KEY ( navio_id_navio )
         REFERENCES navio ( id_navio );
-        
-        
-        
-CREATE OR REPLACE PROCEDURE GerenciarLocalizacao (
-    p_operacao IN VARCHAR2,
-    p_id_localizacao IN LOCALIZACAO.id_localizacao%TYPE,
-    p_latitude IN LOCALIZACAO.latitude%TYPE DEFAULT NULL,
-    p_longitude IN LOCALIZACAO.longitude%TYPE DEFAULT NULL,
-    p_porto IN LOCALIZACAO.porto%TYPE DEFAULT NULL
+
+ALTER TABLE relation_17
+    ADD CONSTRAINT relation_17_operacao_lastro_fk FOREIGN KEY ( operacao_lastro_id_operacao )
+        REFERENCES operacao_lastro ( id_operacao );
+
+ALTER TABLE relation_20
+    ADD CONSTRAINT relation_20_destino_fk FOREIGN KEY ( destino_id_porto )
+        REFERENCES destino ( id_porto );
+
+ALTER TABLE relation_20
+    ADD CONSTRAINT relation_20_navio_fk FOREIGN KEY ( navio_id_navio )
+        REFERENCES navio ( id_navio );
+
+ALTER TABLE tipo_navio
+    ADD CONSTRAINT tipo_navio_navio_fk FOREIGN KEY ( navio_id_navio )
+        REFERENCES navio ( id_navio );
+
+
+ALTER TABLE tipo_operacao
+    ADD CONSTRAINT tipo_operacao_operacao_lastro_fk FOREIGN KEY ( operacao_lastro_id_operacao )
+        REFERENCES operacao_lastro ( id_operacao );
+                                     
+  
+    
+CREATE OR REPLACE PROCEDURE manage_destino (
+  p_operation IN VARCHAR2,
+  p_id_porto IN NUMBER,
+  p_nome VARCHAR2 DEFAULT NULL
 )
 IS
 BEGIN
-    IF p_operacao = 'INSERT' THEN
-        IF p_id_localizacao IS NULL THEN
-            RAISE_APPLICATION_ERROR(-20001, 'id_localizacao não pode ser nulo.');
-        ELSIF p_latitude IS NULL THEN
-            RAISE_APPLICATION_ERROR(-20002, 'latitude não pode ser nulo.');
-        ELSIF p_longitude IS NULL THEN
-            RAISE_APPLICATION_ERROR(-20003, 'longitude não pode ser nulo.');
-        ELSIF p_porto IS NULL THEN
-            RAISE_APPLICATION_ERROR(-20004, 'porto não pode ser nulo.');
-        END IF;
-
-        BEGIN
-            INSERT INTO LOCALIZACAO (id_localizacao, latitude, longitude, porto)
-            VALUES (p_id_localizacao, p_latitude, p_longitude, p_porto);
-        EXCEPTION
-            WHEN DUP_VAL_ON_INDEX THEN
-                RAISE_APPLICATION_ERROR(-20005, 'id_localizacao já existe.');
-            WHEN OTHERS THEN
-                RAISE_APPLICATION_ERROR(-20006, 'Erro ao inserir localização: ' || SQLERRM);
-        END;
-
-    ELSIF p_operacao = 'UPDATE' THEN
-        IF p_id_localizacao IS NULL THEN
-            RAISE_APPLICATION_ERROR(-20001, 'id_localizacao não pode ser nulo.');
-        END IF;
-
-        BEGIN
-            UPDATE LOCALIZACAO
-            SET latitude = NVL(p_latitude, latitude),
-                longitude = NVL(p_longitude, longitude),
-                porto = NVL(p_porto, porto)
-            WHERE id_localizacao = p_id_localizacao;
-
-            IF SQL%NOTFOUND THEN
-                RAISE_APPLICATION_ERROR(-20007, 'Localização não encontrada.');
-            END IF;
-        EXCEPTION
-            WHEN OTHERS THEN
-                RAISE_APPLICATION_ERROR(-20008, 'Erro ao atualizar localização: ' || SQLERRM);
-        END;
-
-    ELSIF p_operacao = 'DELETE' THEN
-        IF p_id_localizacao IS NULL THEN
-            RAISE_APPLICATION_ERROR(-20001, 'id_localizacao não pode ser nulo.');
-        END IF;
-
-        BEGIN
-            DELETE FROM LOCALIZACAO
-            WHERE id_localizacao = p_id_localizacao;
-
-            IF SQL%NOTFOUND THEN
-                RAISE_APPLICATION_ERROR(-20007, 'Localização não encontrada.');
-            END IF;
-        EXCEPTION
-            WHEN OTHERS THEN
-                RAISE_APPLICATION_ERROR(-20009, 'Erro ao deletar localização: ' || SQLERRM);
-        END;
-
-    ELSE
-        RAISE_APPLICATION_ERROR(-20010, 'Operação inválida. Use INSERT, UPDATE ou DELETE.');
+  IF p_operation = 'INSERT' THEN
+    -- Insert a new destino
+    INSERT INTO DESTINO (id_porto, nome)
+    VALUES (p_id_porto, p_nome);
+    COMMIT;
+  ELSIF p_operation = 'UPDATE' THEN
+    -- Update an existing destino
+    UPDATE DESTINO
+    SET nome = p_nome
+    WHERE id_porto = p_id_porto;
+  
+    IF SQL%ROWCOUNT = 0 THEN
+      RAISE_APPLICATION_ERROR(-21003, 'Id_porto não encontrado');
     END IF;
+    COMMIT;
+  ELSIF p_operation = 'DELETE' THEN
+    -- Delete a destino
+    DELETE FROM DESTINO
+    WHERE id_porto = p_id_porto;
+  
+    IF SQL%ROWCOUNT = 0 THEN
+      RAISE_APPLICATION_ERROR(-21005, 'Nenhuma linha excluída, id_porto não encontrado');
+    END IF;
+    COMMIT;
+  ELSE
+    RAISE_APPLICATION_ERROR(-21007, 'Operação inválida');
+  END IF;
 END;
-/
+/                                      
 
+EXEC manage_destino('INSERT', 123, 'Porto Marítimo');
+EXEC manage_destino('UPDATE', 123, 'Porto Novo');
+EXEC manage_destino('DELETE', 123);
+
+CREATE OR REPLACE PROCEDURE manage_localizacao (
+  p_operation IN VARCHAR2,
+  p_id_localizacao IN NUMBER,
+  p_latitude IN NUMBER DEFAULT NULL,
+  p_longitude IN NUMBER DEFAULT NULL,
+  p_destino_id_porto IN NUMBER DEFAULT NULL
+)
+IS
 BEGIN
-    GerenciarLocalizacao(
-        p_operacao => 'INSERT',
-        p_id_localizacao => 1,
-        p_latitude => 377749,
-        p_longitude => 1224194,
-        p_porto => 'San Francisco'
-    );
+  IF p_operation = 'INSERT' THEN
+    -- Insert a new localizacao
+    INSERT INTO LOCALIZACAO (id_localizacao, latitude, longitude, destino_id_porto)
+    VALUES (p_id_localizacao, p_latitude, p_longitude, p_destino_id_porto);
+    COMMIT;
+  ELSIF p_operation = 'UPDATE' THEN
+    -- Update an existing localizacao
+    UPDATE LOCALIZACAO
+    SET latitude = p_latitude,
+        longitude = p_longitude,
+        destino_id_porto = p_destino_id_porto
+    WHERE id_localizacao = p_id_localizacao;
+
+    IF SQL%ROWCOUNT = 0 THEN
+      RAISE_APPLICATION_ERROR(-21003, 'Id_localizacao não encontrado');
+    END IF;
+    COMMIT;
+  ELSIF p_operation = 'DELETE' THEN
+    -- Delete a localizacao
+    DELETE FROM LOCALIZACAO
+    WHERE id_localizacao = p_id_localizacao;
+
+    IF SQL%ROWCOUNT = 0 THEN
+      RAISE_APPLICATION_ERROR(-21005, 'Nenhuma linha excluída, id_localizacao não encontrado');
+    END IF;
+    COMMIT;
+  ELSE
+    RAISE_APPLICATION_ERROR(-21007, 'Operação inválida');
+  END IF;
 END;
 /
 
+EXEC manage_localizacao('INSERT', 123, 45678, 123, 123);
+EXEC manage_localizacao('UPDATE', 123, 22278, 123, 123);
+EXEC manage_localizacao('DELETE', 123);
 
-BEGIN
-    GerenciarLocalizacao(
-        p_operacao => 'UPDATE',
-        p_id_localizacao => 1,
-        p_latitude => 377750,
-        p_longitude => 1224195,
-        p_porto => 'San Francisco Updated'
-    );
-END;
-/
 
-select * from localizacao;
+
+

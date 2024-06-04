@@ -4,7 +4,7 @@
 <createdTime>2024-05-29 04:35:55 UTC</createdTime>
 <ownerDesignName>Modelo logico com 3fn</ownerDesignName>
 <engineerTo>
-<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+<item key="835E5B26-B1C1-A359-0794-CB0E4B2419DC" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -15,26 +15,12 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id_localizacao" id="AE0A2735-CB0A-E322-8B27-F11BBCA54EDA">
-<createdBy>mniac</createdBy>
-<createdTime>2024-05-29 04:44:18 UTC</createdTime>
-<generatorID>FF16182C-3C81-D698-379F-4C0B4239F26D</generatorID>
-<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
-<engineerTo>
-<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
-</engineerTo>
-<referedAttribute>0205A009-931E-BDF3-20FB-C09551A54AB0</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="id_historico" id="A1004674-DDFD-FDE1-8F4D-F1A020D84B44">
 <createdBy>mniac</createdBy>
 <createdTime>2024-05-29 04:51:51 UTC</createdTime>
 <ownerDesignName>Modelo logico com 3fn</ownerDesignName>
 <engineerTo>
-<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+<item key="835E5B26-B1C1-A359-0794-CB0E4B2419DC" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -46,7 +32,7 @@
 <createdTime>2024-05-29 04:52:25 UTC</createdTime>
 <ownerDesignName>Modelo logico com 3fn</ownerDesignName>
 <engineerTo>
-<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+<item key="835E5B26-B1C1-A359-0794-CB0E4B2419DC" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -60,37 +46,9 @@
 <generatorID>43F35DF2-4DC0-DABC-960B-51DAF85ED933</generatorID>
 <ownerDesignName>Modelo logico com 3fn</ownerDesignName>
 <engineerTo>
-<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+<item key="835E5B26-B1C1-A359-0794-CB0E4B2419DC" value="true"/>
 </engineerTo>
 <referedAttribute>26D9B704-4090-31AD-0155-203D6DC1BB9D</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="id_operacao" id="9D1ECD8C-2369-59D7-081C-44224B6E5213">
-<createdBy>mniac</createdBy>
-<createdTime>2024-05-29 04:58:51 UTC</createdTime>
-<generatorID>43F35DF2-4DC0-DABC-960B-51DAF85ED933</generatorID>
-<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
-<engineerTo>
-<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
-</engineerTo>
-<referedAttribute>AFB3E6FC-5273-6231-0AFF-68B43DC19B00</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="id_localizacao1" id="890FA488-82C5-948D-CAFA-228AC5910F64">
-<createdBy>mniac</createdBy>
-<createdTime>2024-05-29 04:58:51 UTC</createdTime>
-<generatorID>43F35DF2-4DC0-DABC-960B-51DAF85ED933</generatorID>
-<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
-<engineerTo>
-<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
-</engineerTo>
-<referedAttribute>927C85F4-FFDA-19A7-5CE6-70F793E8B2CD</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -102,7 +60,7 @@
 <generatorID>461A5115-A875-522E-20E3-5FF31E792A5F</generatorID>
 <ownerDesignName>Modelo logico com 3fn</ownerDesignName>
 <engineerTo>
-<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+<item key="835E5B26-B1C1-A359-0794-CB0E4B2419DC" value="true"/>
 </engineerTo>
 <referedAttribute>B81477DE-E190-81BE-5504-39BA9FBC9B89</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
@@ -110,43 +68,15 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_monitoramento1" id="C9BF78DE-4C7A-912F-D7CC-545AB8BD507D">
+<Attribute name="id_localizacao" id="E3FCE325-64B1-C2C9-1750-C6F55A39A9F5">
 <createdBy>mniac</createdBy>
-<createdTime>2024-06-03 12:56:02 UTC</createdTime>
-<generatorID>461A5115-A875-522E-20E3-5FF31E792A5F</generatorID>
+<createdTime>2024-06-04 17:19:36 UTC</createdTime>
+<generatorID>FAECFD4E-BBE1-85DC-2C5F-B1254D469728</generatorID>
 <ownerDesignName>Modelo logico com 3fn</ownerDesignName>
 <engineerTo>
-<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+<item key="835E5B26-B1C1-A359-0794-CB0E4B2419DC" value="true"/>
 </engineerTo>
-<referedAttribute>2F483E1E-DF0F-A511-D087-55537DE7A125</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="id_operacao1" id="F66CDE95-4EF8-F350-FFA7-F9D29B3CBDB0">
-<createdBy>mniac</createdBy>
-<createdTime>2024-06-03 12:56:02 UTC</createdTime>
-<generatorID>461A5115-A875-522E-20E3-5FF31E792A5F</generatorID>
-<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
-<engineerTo>
-<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
-</engineerTo>
-<referedAttribute>51EF90DC-054D-05B2-F102-8B66E275450D</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="id_localizacao2" id="CD7275DC-889D-6782-BE28-7C849D289B65">
-<createdBy>mniac</createdBy>
-<createdTime>2024-06-03 12:56:02 UTC</createdTime>
-<generatorID>461A5115-A875-522E-20E3-5FF31E792A5F</generatorID>
-<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
-<engineerTo>
-<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
-</engineerTo>
-<referedAttribute>59883BC8-B05A-4B3C-8B0F-F2860556E180</referedAttribute>
+<referedAttribute>0205A009-931E-BDF3-20FB-C09551A54AB0</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -159,11 +89,10 @@
 <createdTime>2024-05-29 04:43:28 UTC</createdTime>
 <ownerDesignName>Modelo logico com 3fn</ownerDesignName>
 <engineerTo>
-<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+<item key="835E5B26-B1C1-A359-0794-CB0E4B2419DC" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>AE0A2735-CB0A-E322-8B27-F11BBCA54EDA</attributeRef>
 <attributeRef>A1004674-DDFD-FDE1-8F4D-F1A020D84B44</attributeRef>
 </usedAttributes>
 </identifier>

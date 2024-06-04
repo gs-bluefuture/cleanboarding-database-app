@@ -4,7 +4,7 @@
 <createdTime>2024-05-29 04:35:36 UTC</createdTime>
 <ownerDesignName>Modelo logico com 3fn</ownerDesignName>
 <engineerTo>
-<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+<item key="835E5B26-B1C1-A359-0794-CB0E4B2419DC" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -20,7 +20,7 @@
 <createdTime>2024-05-29 04:44:34 UTC</createdTime>
 <ownerDesignName>Modelo logico com 3fn</ownerDesignName>
 <engineerTo>
-<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+<item key="835E5B26-B1C1-A359-0794-CB0E4B2419DC" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -32,7 +32,7 @@
 <createdTime>2024-05-29 04:45:50 UTC</createdTime>
 <ownerDesignName>Modelo logico com 3fn</ownerDesignName>
 <engineerTo>
-<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+<item key="835E5B26-B1C1-A359-0794-CB0E4B2419DC" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -45,7 +45,7 @@
 <createdTime>2024-05-29 04:46:30 UTC</createdTime>
 <ownerDesignName>Modelo logico com 3fn</ownerDesignName>
 <engineerTo>
-<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+<item key="835E5B26-B1C1-A359-0794-CB0E4B2419DC" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -53,13 +53,13 @@
 <logicalDatatype>LOGDT047</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_localizacao" id="A57C2962-2AE0-8134-5719-5389CF74F7BE">
+<Attribute name="id_localizacao" id="E2BD8FB1-1A0F-F748-AF69-A58181298F27">
 <createdBy>mniac</createdBy>
-<createdTime>2024-05-29 04:56:40 UTC</createdTime>
-<generatorID>82CD91EA-C1D1-6C74-F05D-F540B63BA00E</generatorID>
+<createdTime>2024-06-04 17:21:38 UTC</createdTime>
+<generatorID>6E8AA78B-D46B-4E81-46E6-F3F39B73F3E8</generatorID>
 <ownerDesignName>Modelo logico com 3fn</ownerDesignName>
 <engineerTo>
-<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="true"/>
+<item key="835E5B26-B1C1-A359-0794-CB0E4B2419DC" value="true"/>
 </engineerTo>
 <referedAttribute>0205A009-931E-BDF3-20FB-C09551A54AB0</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
@@ -73,14 +73,12 @@
 <createdBy>mniac</createdBy>
 <createdTime>2024-05-29 04:45:39 UTC</createdTime>
 <ownerDesignName>Modelo logico com 3fn</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="8EEFE6F2-504B-7D6A-5245-8939B224A4CE" value="false"/>
+<item key="835E5B26-B1C1-A359-0794-CB0E4B2419DC" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>3272CA82-7163-5E22-718E-BA726FF16379</attributeRef>
-<attributeRef>A57C2962-2AE0-8134-5719-5389CF74F7BE</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

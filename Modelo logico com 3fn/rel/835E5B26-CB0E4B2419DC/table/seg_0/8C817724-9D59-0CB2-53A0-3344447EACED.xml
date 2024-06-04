@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8C817724-9D59-0CB2-53A0-3344447EACED" name="Relation_20">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-04 17:21:59 UTC</createdTime>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="DESTINO_id_porto" id="BAAB5524-B14A-B488-AFF4-6A169ECDD423">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-04 17:21:59 UTC</createdTime>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1FDAA4A0-5223-5410-5793-0BF688C2F786" referredColumn="35741F0D-F6F9-80C4-FD3E-A46247D1828D"/>
+</associations>
+</Column>
+<Column name="NAVIO_id_navio" id="C5E9E617-0AE0-344C-4591-E285CE02057B">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-04 17:21:59 UTC</createdTime>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="49FE9433-E8F1-11D0-5394-BF50C4F1991F" referredColumn="80E1962F-1333-3223-5682-80B2B3A4AE5B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F621B108-84BC-BD56-C9A4-C43ADA70D681" name="Relation_20_PK">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-04 17:21:59 UTC</createdTime>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BAAB5524-B14A-B488-AFF4-6A169ECDD423"/>
+<colUsage columnID="C5E9E617-0AE0-344C-4591-E285CE02057B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B66D29A4-A55B-A1CE-12DC-5476EF013678" name="Relation_20_DESTINO_FK">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-04 17:21:59 UTC</createdTime>
+<generatorID>48D6F93D-684C-2862-4084-BCAC39DE7515</generatorID>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BAAB5524-B14A-B488-AFF4-6A169ECDD423"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="70619B79-4B27-13BD-9ECB-358F4C054872" name="Relation_20_NAVIO_FK">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-04 17:21:59 UTC</createdTime>
+<generatorID>48D6F93D-684C-2862-4084-BCAC39DE7515</generatorID>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C5E9E617-0AE0-344C-4591-E285CE02057B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

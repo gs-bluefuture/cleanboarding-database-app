@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1D727900-BCD6-17CE-852A-EA55BC11846C" name="TIPO_NAVIO">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-04 17:21:59 UTC</createdTime>
+<generatorID>D6A4CDBE-512D-3C7F-44E2-563E1829A206</generatorID>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_tipoNavio" id="2DD110CA-F1CB-9B0B-2159-84FB1231AF15">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-04 17:21:59 UTC</createdTime>
+<generatorID>C32B3B39-2EFA-0459-4694-4693FA371344</generatorID>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TipoNome" id="2D76B9DD-2FF4-9741-A3A0-B0CB1BF8FC67">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-04 17:21:59 UTC</createdTime>
+<generatorID>0758BAE9-595E-2A46-5C4D-16A83ED1E33A</generatorID>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NAVIO_id_navio" id="066807DF-D462-338D-BDB7-8E231249C20C">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-04 17:21:59 UTC</createdTime>
+<generatorID>89895C02-17BF-5532-1817-9191B6945446</generatorID>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4ECE571D-8D3B-2EC8-8E3C-3A1CBEEB58CF" referredColumn="80E1962F-1333-3223-5682-80B2B3A4AE5B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7B755F85-7B70-535A-7C3F-5D8C203B64F0" name="TIPO_NAVIO_PK">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-04 17:21:59 UTC</createdTime>
+<generatorID>C19EDC75-AF01-826D-C686-90B003CF91FD</generatorID>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2DD110CA-F1CB-9B0B-2159-84FB1231AF15"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CAE4E4AE-20F8-4D57-7A03-7E9FAC2F7D96" name="TIPO_NAVIO_NAVIO_FK">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-04 17:21:59 UTC</createdTime>
+<generatorID>AE13319D-064D-EDF9-7137-CB723C943FDD</generatorID>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="066807DF-D462-338D-BDB7-8E231249C20C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

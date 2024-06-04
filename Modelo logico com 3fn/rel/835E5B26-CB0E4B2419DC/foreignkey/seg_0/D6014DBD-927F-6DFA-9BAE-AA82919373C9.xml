@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D6014DBD-927F-6DFA-9BAE-AA82919373C9" containerWithKeyObject="948E6E2D-7DB2-F476-918C-16A58008587B" localFKIndex="7380397C-BD9A-C441-48C3-C21DFB160EC6" name="HISTORICO_LOCALIZACAO_MONITORAMENTO_OPERACAO_FK">
+<createdBy>mniac</createdBy>
+<createdTime>2024-06-04 17:21:59 UTC</createdTime>
+<generatorID>43F35DF2-4DC0-DABC-960B-51DAF85ED933</generatorID>
+<ownerDesignName>Modelo logico com 3fn</ownerDesignName>
+<referredTableLongName>MONITORAMENTO_OPERACAO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>92B36F27-9228-CB64-CE3D-EFCBD6BC311F</referredTableID>
+<keyObject>B536CAE2-ADAA-0745-68C0-9D32401F1147</keyObject>
+<referredKeyID>B536CAE2-ADAA-0745-68C0-9D32401F1147</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_monitoramento</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
