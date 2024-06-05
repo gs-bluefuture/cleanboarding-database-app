@@ -573,45 +573,52 @@ CREATE TABLE log_alteracoes (
  CONSTRAINT pk_log_alteracoes PRIMARY KEY (id_log)
 );
 
-CREATE OR REPLACE TRIGGER auditar_alteracoes_navio
-AFTER INSERT OR UPDATE OR DELETE ON navio
+CREATE OR REPLACE TRIGGER auditar_alteracoes_destino
+AFTER INSERT OR UPDATE OR DELETE ON destino
 FOR EACH ROW
 DECLARE
- v_nome_usuario VARCHAR2(50);
- v_dados_antigos CLOB;
- v_dados_novos CLOB;
+    v_nome_usuario VARCHAR2(50);
+    v_dados_antigos CLOB;
+    v_dados_novos CLOB;
 BEGIN
- -- Obter o nome do usuário da sessão atual
- v_nome_usuario := USER;
- 
- -- Montar os dados antigos, se houver deleção ou atualização
- IF DELETING OR UPDATING THEN
-    v_dados_antigos := 'ID_NAVIO: ' || :OLD.id_navio || ', NOME: ' || :OLD.nome || ', CAPACIDADE_LASTRO: ' || :OLD.capacidade_lastro || ', MONITORAMENTO_OPERACAO_ID_MONITORAMENTO: ' || :OLD.monitoramento_operacao_id_monitoramento;
- END IF;
- 
- -- Montar os dados novos, se houver inserção ou atualização
- IF INSERTING OR UPDATING THEN
-    v_dados_novos := 'ID_NAVIO: ' || :NEW.id_navio || ', NOME: ' || :NEW.nome || ', CAPACIDADE_LASTRO: ' || :NEW.capacidade_lastro || ', MONITORAMENTO_OPERACAO_ID_MONITORAMENTO: ' || :NEW.monitoramento_operacao_id_monitoramento;
- END IF;
- 
- -- Inserir o registro de auditoria na tabela de log, se existir
- BEGIN
-    INSERT INTO log_alteracoes (nome_usuario, tabela_afetada, data_hora, dados_antigos, dados_novos)
-    VALUES (v_nome_usuario, 'navio', SYSTIMESTAMP, v_dados_antigos, v_dados_novos);
- EXCEPTION
-    WHEN OTHERS THEN
-       NULL; -- Se ocorrer um erro ao inserir no log, não faça nada (pode ser tratado de forma diferente conforme necessário)
- END;
+    -- Obter o nome do usuário da sessão atual
+    v_nome_usuario := USER;
+    
+    -- Montar os dados antigos, se houver deleção ou atualização
+    IF DELETING OR UPDATING THEN
+        v_dados_antigos := 'ID_PORTO: ' || :OLD.id_porto || ', NOME: ' || :OLD.nome;
+    END IF;
+    
+    -- Montar os dados novos, se houver inserção ou atualização
+    IF INSERTING OR UPDATING THEN
+        v_dados_novos := 'ID_PORTO: ' || :NEW.id_porto || ', NOME: ' || :NEW.nome;
+    END IF;
+    
+    -- Inserir o registro de auditoria na tabela de log, se existir
+    BEGIN
+        INSERT INTO log_alteracoes (nome_usuario, tabela_afetada, data_hora, dados_antigos, dados_novos)
+        VALUES (v_nome_usuario, 'destino', SYSTIMESTAMP, v_dados_antigos, v_dados_novos);
+    EXCEPTION
+        WHEN OTHERS THEN
+            NULL; 
+    END;
 END;
 /
 
-EXEC manage_navio('UPDATE', 133, 'Navio B', 133, 1);
 
-ALTER TRIGGER auditar_alteracoes_navio DISABLE;
+ALTER TRIGGER auditar_alteracoes_destino enable;
 
+INSERT INTO destino (id_porto, nome) VALUES (4, 'Porto A');
+INSERT INTO destino (id_porto, nome) VALUES (5, 'Porto B');
+COMMIT;
 
+-- Agora, vamos atualizar um registro na tabela destino
+UPDATE destino SET nome = 'Porto C' WHERE id_porto = 4;
+COMMIT;
 
+-- Agora, vamos excluir um registro na tabela destino
+DELETE FROM destino WHERE id_porto = 4;
+COMMIT;
 
-
-
+select * from log_alteracoes;
 
