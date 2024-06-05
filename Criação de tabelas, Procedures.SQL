@@ -69,7 +69,6 @@ CREATE TABLE relation_17 (
 
 ALTER TABLE relation_17 ADD CONSTRAINT relation_17_pk PRIMARY KEY ( operacao_lastro_id_operacao,
                                                                     navio_id_navio );
-
 CREATE TABLE relation_20 (
     destino_id_porto NUMBER NOT NULL,
     navio_id_navio   NUMBER NOT NULL
@@ -77,7 +76,6 @@ CREATE TABLE relation_20 (
 
 ALTER TABLE relation_20 ADD CONSTRAINT relation_20_pk PRIMARY KEY ( destino_id_porto,
                                                                     navio_id_navio );
-
 CREATE TABLE tipo_navio (
     id_tiponavio   NUMBER NOT NULL,
     tiponome       VARCHAR2(30),
@@ -94,12 +92,10 @@ CREATE TABLE tipo_operacao (
 
 ALTER TABLE tipo_operacao ADD CONSTRAINT tipo_operacao_pk PRIMARY KEY ( id_tipooperacao );
 
---  ERROR: FK name length exceeds maximum allowed length(30) 
 ALTER TABLE historico_localizacao
     ADD CONSTRAINT historico_localizacao_localizacao_fk FOREIGN KEY ( localizacao_id_localizacao )
         REFERENCES localizacao ( id_localizacao );
 
---  ERROR: FK name length exceeds maximum allowed length(30) 
 ALTER TABLE historico_localizacao
     ADD CONSTRAINT historico_localizacao_monitoramento_operacao_fk FOREIGN KEY ( monitoramento_operacao_id_monitoramento )
         REFERENCES monitoramento_operacao ( id_monitoramento );
@@ -151,141 +147,179 @@ ALTER TABLE tipo_operacao
     ADD CONSTRAINT tipo_operacao_operacao_lastro_fk FOREIGN KEY ( operacao_lastro_id_operacao )
         REFERENCES operacao_lastro ( id_operacao );
                                      
-  
+-------------------------------------------------  
     
-CREATE OR REPLACE PROCEDURE manage_destino (
-  p_operation IN VARCHAR2,
-  p_id_porto IN NUMBER,
-  p_nome VARCHAR2 DEFAULT NULL
-)
-IS
-BEGIN
-  IF p_operation = 'INSERT' THEN
-    -- Insert a new destino
-    INSERT INTO DESTINO (id_porto, nome)
-    VALUES (p_id_porto, p_nome);
-    COMMIT;
-  ELSIF p_operation = 'UPDATE' THEN
-    -- Update an existing destino
-    UPDATE DESTINO
-    SET nome = p_nome
-    WHERE id_porto = p_id_porto;
-  
-    IF SQL%ROWCOUNT = 0 THEN
-      RAISE_APPLICATION_ERROR(-21003, 'Id_porto não encontrado');
-    END IF;
-    COMMIT;
-  ELSIF p_operation = 'DELETE' THEN
-    -- Delete a destino
-    DELETE FROM DESTINO
-    WHERE id_porto = p_id_porto;
-  
-    IF SQL%ROWCOUNT = 0 THEN
-      RAISE_APPLICATION_ERROR(-21005, 'Nenhuma linha excluída, id_porto não encontrado');
-    END IF;
-    COMMIT;
-  ELSE
-    RAISE_APPLICATION_ERROR(-21007, 'Operação inválida');
-  END IF;
-END;
-/                                      
-
-EXEC manage_destino('INSERT', 123, 'Porto Marítimo');
-EXEC manage_destino('UPDATE', 123, 'Porto Novo');
-EXEC manage_destino('DELETE', 123);
-
-
-CREATE OR REPLACE PROCEDURE manage_localizacao (
-  p_operation IN VARCHAR2,
-  p_id_localizacao IN NUMBER,
-  p_latitude IN NUMBER DEFAULT NULL,
-  p_longitude IN NUMBER DEFAULT NULL,
-  p_destino_id_porto IN NUMBER DEFAULT NULL
-)
-IS
-BEGIN
-  IF p_operation = 'INSERT' THEN
-    -- Insert a new localizacao
-    INSERT INTO LOCALIZACAO (id_localizacao, latitude, longitude, destino_id_porto)
-    VALUES (p_id_localizacao, p_latitude, p_longitude, p_destino_id_porto);
-    COMMIT;
-  ELSIF p_operation = 'UPDATE' THEN
-    -- Update an existing localizacao
-    UPDATE LOCALIZACAO
-    SET latitude = p_latitude,
-        longitude = p_longitude,
-        destino_id_porto = p_destino_id_porto
-    WHERE id_localizacao = p_id_localizacao;
-
-    IF SQL%ROWCOUNT = 0 THEN
-      RAISE_APPLICATION_ERROR(-21003, 'Id_localizacao não encontrado');
-    END IF;
-    COMMIT;
-  ELSIF p_operation = 'DELETE' THEN
-    -- Delete a localizacao
-    DELETE FROM LOCALIZACAO
-    WHERE id_localizacao = p_id_localizacao;
-
-    IF SQL%ROWCOUNT = 0 THEN
-      RAISE_APPLICATION_ERROR(-21005, 'Nenhuma linha excluída, id_localizacao não encontrado');
-    END IF;
-    COMMIT;
-  ELSE
-    RAISE_APPLICATION_ERROR(-21007, 'Operação inválida');
-  END IF;
-END;
+CREATE OR REPLACE PACKAGE meu_package AS
+    PROCEDURE manage_destino (
+        p_operation IN VARCHAR2,
+        p_id_porto IN NUMBER,
+        p_nome VARCHAR2 DEFAULT NULL
+    );
+     PROCEDURE manage_localizacao (
+        p_operation IN VARCHAR2,
+        p_id_localizacao IN NUMBER,
+        p_latitude IN NUMBER DEFAULT NULL,
+        p_longitude IN NUMBER DEFAULT NULL,
+        p_destino_id_porto IN NUMBER DEFAULT NULL
+    );
+      PROCEDURE manage_operacao_lastro (
+        p_operation IN VARCHAR2,
+        p_id_operacao IN NUMBER,
+        p_quantidade_agua IN NUMBER,
+        p_operacao_timestamp IN TIMESTAMP WITH TIME ZONE,
+        p_localizacao_id IN NUMBER
+    );
+    PROCEDURE manage_monitoramento_operacao (
+    p_operation             IN VARCHAR2,
+    p_id_monitoramento      IN NUMBER,
+    p_nome_metrica          IN VARCHAR2,
+    p_valor_metrica         IN NUMBER,
+    p_operacao_lastro_id    IN NUMBER
+);
+    PROCEDURE manage_navio (
+    p_operation             IN VARCHAR2,
+    p_id_navio              IN NUMBER,
+    p_nome                  IN VARCHAR2,
+    p_capacidade_lastro     IN NUMBER,
+    p_monitoramento_id      IN NUMBER
+);
+    PROCEDURE manage_tipo_navio (
+    p_operation          IN VARCHAR2,
+    p_id_tiponavio       IN NUMBER,
+    p_tiponome           IN VARCHAR2,
+    p_navio_id_navio     IN NUMBER
+);
+    PROCEDURE manage_tipo_operacao (
+    p_operation             IN VARCHAR2,
+    p_id_tipooperacao      IN NUMBER,
+    p_nomeoperacao         IN VARCHAR2,
+    p_operacao_lastro_id_operacao IN NUMBER
+);
+    PROCEDURE manage_historico_localizacao (
+    p_operation                     IN VARCHAR2,
+    p_id_historico                 IN NUMBER,
+    p_historico_timestamp          IN TIMESTAMP WITH LOCAL TIME ZONE,
+    p_monitoramento_operacao_id    IN NUMBER,
+    p_navio_id                     IN NUMBER,
+    p_localizacao_id               IN NUMBER
+);
+    
+    
+END meu_package;
 /
 
-EXEC manage_localizacao('INSERT', 123, 45678, 123, 123);
-EXEC manage_localizacao('UPDATE', 123, 22278, 123, 123);
-EXEC manage_localizacao('DELETE', 123);
-
-CREATE OR REPLACE PROCEDURE manage_operacao_lastro (
-  p_operation IN VARCHAR2,
-  p_id_operacao          IN NUMBER,
-  p_quantidade_agua     IN NUMBER,
-  p_operacao_timestamp  IN TIMESTAMP WITH TIME ZONE,
-  p_localizacao_id      IN NUMBER
-)
-IS
-BEGIN
-  IF p_operation = 'INSERT' THEN
-    -- Insert a new operacao_lastro
-    INSERT INTO operacao_lastro (id_operacao, quantidade_agua, operecao_timestamp, localizacao_id_localizacao)
-    VALUES (p_id_operacao, p_quantidade_agua, p_operacao_timestamp, p_localizacao_id);
-    COMMIT;
-  ELSIF p_operation = 'UPDATE' THEN
-    -- Update an existing operacao_lastro
-    UPDATE operacao_lastro
-    SET quantidade_agua = p_quantidade_agua,
-        operecao_timestamp = p_operacao_timestamp,
-        localizacao_id_localizacao = p_localizacao_id
-    WHERE id_operacao = p_id_operacao;
-
-    IF SQL%ROWCOUNT = 0 THEN
-      RAISE_APPLICATION_ERROR(-21003, 'Id_operacao não encontrado');
-    END IF;
-    COMMIT;
-  ELSIF p_operation = 'DELETE' THEN
-    -- Delete a operacao_lastro
-    DELETE FROM operacao_lastro
-    WHERE id_operacao = p_id_operacao;
-
-    IF SQL%ROWCOUNT = 0 THEN
-      RAISE_APPLICATION_ERROR(-21005, 'Nenhuma linha excluída, id_operacao não encontrado');
-    END IF;
-    COMMIT;
-  ELSE
-    RAISE_APPLICATION_ERROR(-21007, 'Operação inválida');
-  END IF;
-END;
-/
-
-EXEC manage_operacao_lastro('INSERT', 123, 123,TIMESTAMP '2024-06-04 16:22:20.235765 ', 123);
-EXEC manage_operacao_lastro('UPDATE', 123, 2223,TIMESTAMP '2024-06-04 16:22:20.235765 ', 123);
-EXEC manage_operacao_lastro('DELETE', 123, NULL, NULL, NULL);
-
-CREATE OR REPLACE PROCEDURE manage_monitoramento_operacao (
+CREATE OR REPLACE PACKAGE BODY meu_package AS
+    PROCEDURE manage_destino (
+        p_operation IN VARCHAR2,
+        p_id_porto IN NUMBER,
+        p_nome VARCHAR2 DEFAULT NULL
+    ) IS
+    BEGIN
+        IF p_operation = 'INSERT' THEN
+            -- Insert a new destino
+            INSERT INTO DESTINO (id_porto, nome)
+            VALUES (p_id_porto, p_nome);
+            COMMIT;
+        ELSIF p_operation = 'UPDATE' THEN
+            -- Update an existing destino
+            UPDATE DESTINO
+            SET nome = p_nome
+            WHERE id_porto = p_id_porto;
+          
+            IF SQL%ROWCOUNT = 0 THEN
+                RAISE_APPLICATION_ERROR(-21003, 'Id_porto não encontrado');
+            END IF;
+            COMMIT;
+        ELSIF p_operation = 'DELETE' THEN
+            -- Delete a destino
+            DELETE FROM DESTINO
+            WHERE id_porto = p_id_porto;
+          
+            IF SQL%ROWCOUNT = 0 THEN
+                RAISE_APPLICATION_ERROR(-21005, 'Nenhuma linha excluída, id_porto não encontrado');
+            END IF;
+            COMMIT;
+        ELSE
+            RAISE_APPLICATION_ERROR(-21007, 'Operação inválida');
+        END IF;
+    END manage_destino;
+    PROCEDURE manage_localizacao (
+        p_operation IN VARCHAR2,
+        p_id_localizacao IN NUMBER,
+        p_latitude IN NUMBER DEFAULT NULL,
+        p_longitude IN NUMBER DEFAULT NULL,
+        p_destino_id_porto IN NUMBER DEFAULT NULL
+    ) IS
+    BEGIN
+        IF p_operation = 'INSERT' THEN
+            -- Insert a new localizacao
+            INSERT INTO LOCALIZACAO (id_localizacao, latitude, longitude, destino_id_porto)
+            VALUES (p_id_localizacao, p_latitude, p_longitude, p_destino_id_porto);
+            COMMIT;
+        ELSIF p_operation = 'UPDATE' THEN
+            -- Update an existing localizacao
+            UPDATE LOCALIZACAO
+            SET latitude = p_latitude,
+                longitude = p_longitude,
+                destino_id_porto = p_destino_id_porto
+            WHERE id_localizacao = p_id_localizacao;
+    
+            IF SQL%ROWCOUNT = 0 THEN
+                RAISE_APPLICATION_ERROR(-21003, 'Id_localizacao não encontrado');
+            END IF;
+            COMMIT;
+        ELSIF p_operation = 'DELETE' THEN
+            -- Delete a localizacao
+            DELETE FROM LOCALIZACAO
+            WHERE id_localizacao = p_id_localizacao;
+    
+            IF SQL%ROWCOUNT = 0 THEN
+                RAISE_APPLICATION_ERROR(-21005, 'Nenhuma linha excluída, id_localizacao não encontrado');
+            END IF;
+            COMMIT;
+        ELSE
+            RAISE_APPLICATION_ERROR(-21007, 'Operação inválida');
+        END IF;
+    END manage_localizacao;
+    PROCEDURE manage_operacao_lastro (
+        p_operation IN VARCHAR2,
+        p_id_operacao IN NUMBER,
+        p_quantidade_agua IN NUMBER,
+        p_operacao_timestamp IN TIMESTAMP WITH TIME ZONE,
+        p_localizacao_id IN NUMBER
+    ) IS
+    BEGIN
+        IF p_operation = 'INSERT' THEN
+            -- Insert a new operacao_lastro
+            INSERT INTO operacao_lastro (id_operacao, quantidade_agua, operecao_timestamp, localizacao_id_localizacao)
+            VALUES (p_id_operacao, p_quantidade_agua, p_operacao_timestamp, p_localizacao_id);
+            COMMIT;
+        ELSIF p_operation = 'UPDATE' THEN
+            -- Update an existing operacao_lastro
+            UPDATE operacao_lastro
+            SET quantidade_agua = p_quantidade_agua,
+                operecao_timestamp = p_operacao_timestamp,
+                localizacao_id_localizacao = p_localizacao_id
+            WHERE id_operacao = p_id_operacao;
+    
+            IF SQL%ROWCOUNT = 0 THEN
+                RAISE_APPLICATION_ERROR(-21003, 'Id_operacao não encontrado');
+            END IF;
+            COMMIT;
+        ELSIF p_operation = 'DELETE' THEN
+            -- Delete a operacao_lastro
+            DELETE FROM operacao_lastro
+            WHERE id_operacao = p_id_operacao;
+    
+            IF SQL%ROWCOUNT = 0 THEN
+                RAISE_APPLICATION_ERROR(-21005, 'Nenhuma linha excluída, id_operacao não encontrado');
+            END IF;
+            COMMIT;
+        ELSE
+            RAISE_APPLICATION_ERROR(-21007, 'Operação inválida');
+        END IF;
+    END manage_operacao_lastro;
+    PROCEDURE manage_monitoramento_operacao (
     p_operation             IN VARCHAR2,
     p_id_monitoramento      IN NUMBER,
     p_nome_metrica          IN VARCHAR2,
@@ -327,13 +361,7 @@ EXCEPTION
         ROLLBACK;
         RAISE;
 END;
-/
-
-EXEC manage_monitoramento_operacao('INSERT', 1, 'Nome Métrica', 100, 123);
-EXEC manage_monitoramento_operacao('UPDATE', 1, 'Nome Métrica Atualizada', 200, 123);
-EXEC manage_monitoramento_operacao('DELETE', 1, NULL, NULL, NULL);
-
-CREATE OR REPLACE PROCEDURE manage_navio (
+    PROCEDURE manage_navio (
     p_operation             IN VARCHAR2,
     p_id_navio              IN NUMBER,
     p_nome                  IN VARCHAR2,
@@ -375,14 +403,7 @@ EXCEPTION
         ROLLBACK;
         RAISE;
 END;
-/
-
-EXEC manage_navio('INSERT', 133, 'Navio A', 133, 1);
-EXEC manage_navio('UPDATE', 133, 'Navio B', 133, 1);
-EXEC manage_navio('DELETE', 133, NULL, NULL, NULL);
-
-
-CREATE OR REPLACE PROCEDURE manage_tipo_navio (
+    PROCEDURE manage_tipo_navio (
     p_operation          IN VARCHAR2,
     p_id_tiponavio       IN NUMBER,
     p_tiponome           IN VARCHAR2,
@@ -422,13 +443,7 @@ EXCEPTION
         ROLLBACK;
         RAISE;
 END;
-/
-
-EXEC manage_tipo_navio('INSERT', 1, 'Tipo A', 133);
-EXEC manage_tipo_navio('UPDATE', 1, 'Tipo B', 133);
-EXEC manage_tipo_navio('DELETE', 1, NULL, NULL);
-
-CREATE OR REPLACE PROCEDURE manage_tipo_operacao (
+    PROCEDURE manage_tipo_operacao (
     p_operation             IN VARCHAR2,
     p_id_tipooperacao      IN NUMBER,
     p_nomeoperacao         IN VARCHAR2,
@@ -468,13 +483,7 @@ EXCEPTION
         ROLLBACK;
         RAISE;
 END;
-/
-
-EXEC manage_tipo_operacao('INSERT', 1, 'Operação A', 123);
-EXEC manage_tipo_operacao('UPDATE', 1, 'Operação B', 123);
-EXEC manage_tipo_operacao('DELETE', 1, NULL, NULL);
-
-CREATE OR REPLACE PROCEDURE manage_historico_localizacao (
+     PROCEDURE manage_historico_localizacao (
     p_operation                     IN VARCHAR2,
     p_id_historico                 IN NUMBER,
     p_historico_timestamp          IN TIMESTAMP WITH LOCAL TIME ZONE,
@@ -518,16 +527,65 @@ EXCEPTION
         ROLLBACK;
         RAISE;
 END;
-/
+
+
+END meu_package;
+/                                   
+
+EXEC manage_destino('INSERT', 123, 'Porto Marítimo');
+EXEC manage_destino('UPDATE', 123, 'Porto Novo');
+EXEC manage_destino('DELETE', 123);
+EXEC manage_destino('INSERT', 123, 'Porto Marítimo');
+
+
+
+EXEC manage_localizacao('INSERT', 123, 45678, 123, 123);
+EXEC manage_localizacao('UPDATE', 123, 22278, 123, 123);
+EXEC manage_localizacao('DELETE', 123);
+EXEC manage_localizacao('INSERT', 123, 45678, 123, 123);
+
+
+
+EXEC manage_operacao_lastro('INSERT', 123, 123,TIMESTAMP '2024-06-04 16:22:20.235765 ', 123);
+EXEC manage_operacao_lastro('UPDATE', 123, 2223,TIMESTAMP '2024-06-04 16:22:20.235765 ', 123);
+EXEC manage_operacao_lastro('DELETE', 123, NULL, NULL, NULL);
+EXEC manage_operacao_lastro('INSERT', 123, 123,TIMESTAMP '2024-06-04 16:22:20.235765 ', 123);
+
+
+
+EXEC manage_monitoramento_operacao('INSERT', 1, 'Nome Métrica', 100, 123);
+EXEC manage_monitoramento_operacao('UPDATE', 1, 'Nome Métrica Atualizada', 200, 123);
+EXEC manage_monitoramento_operacao('DELETE', 1, NULL, NULL, NULL);
+EXEC manage_monitoramento_operacao('INSERT', 1, 'Nome Métrica', 100, 123);
+
+
+
+EXEC manage_navio('INSERT', 133, 'Navio A', 133, 1);
+EXEC manage_navio('UPDATE', 133, 'Navio B', 133, 1);
+EXEC manage_navio('DELETE', 133, NULL, NULL, NULL);
+EXEC manage_navio('INSERT', 133, 'Navio A', 133, 1);
+
+
+
+EXEC manage_tipo_navio('INSERT', 1, 'Tipo A', 133);
+EXEC manage_tipo_navio('UPDATE', 1, 'Tipo B', 133);
+EXEC manage_tipo_navio('DELETE', 1, NULL, NULL);
+EXEC manage_tipo_navio('INSERT', 1, 'Tipo A', 133);
+
+
+EXEC manage_tipo_operacao('INSERT', 1, 'Operação A', 123);
+EXEC manage_tipo_operacao('UPDATE', 1, 'Operação B', 123);
+EXEC manage_tipo_operacao('DELETE', 1, NULL, NULL);
+EXEC manage_tipo_operacao('INSERT', 1, 'Operação A', 123);
+
 
 EXEC manage_historico_localizacao('INSERT', 1, TIMESTAMP '2024-06-04 16:22:20.235765', 1, 133, 123);
 EXEC manage_historico_localizacao('UPDATE', 1, TIMESTAMP '2023-05-04 16:22:20.235765', 1, 133, 123);
 EXEC manage_historico_localizacao('DELETE', 1, NULL, NULL, NULL, NULL);
-
-commit;
-select * from historico_localizacao;
+EXEC manage_historico_localizacao('INSERT', 1, TIMESTAMP '2024-06-04 16:22:20.235765', 1, 133, 123);
 
 
+--------------------------------------
 SET SERVEROUTPUT ON;
 
 CREATE OR REPLACE PROCEDURE relatorio_qtde_operacoes_lastro_por_navio IS
@@ -563,6 +621,8 @@ BEGIN
 END;
 /
 
+
+-----------------------------
 CREATE TABLE log_alteracoes (
  id_log NUMBER GENERATED BY DEFAULT AS IDENTITY,
  nome_usuario VARCHAR2(50),
@@ -612,13 +672,14 @@ INSERT INTO destino (id_porto, nome) VALUES (4, 'Porto A');
 INSERT INTO destino (id_porto, nome) VALUES (5, 'Porto B');
 COMMIT;
 
--- Agora, vamos atualizar um registro na tabela destino
 UPDATE destino SET nome = 'Porto C' WHERE id_porto = 4;
 COMMIT;
 
--- Agora, vamos excluir um registro na tabela destino
 DELETE FROM destino WHERE id_porto = 4;
 COMMIT;
 
 select * from log_alteracoes;
+
+
+
 
