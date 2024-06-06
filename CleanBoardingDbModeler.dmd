@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="CleanBoardingDbModeler" id="5A8E48F1-3805-259E-5282-DF72F48CE3A9" version="3.5">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 22:42:41 UTC</createdTime>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>5A8E48F1-3805-259E-5282-DF72F48CE3A9</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="B224D1E3-2627-A41B-0B03-5ACE8F5D8D65">
+<designStoragePath>C:\Users\matpi\Downloads\cleanboarding-database-app-main\Modelo logico com 3fn</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B3552200-E783-96C7-47CD-3F8C5BB94134" name="DESTINO">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 22:43:58 UTC</createdTime>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<importedID>8F94A06B-590F-F3C9-822A-1F4912EEC76F</importedID>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_porto" id="9CC2BB5F-AE92-141C-C7BF-613299BE7419">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 22:43:58 UTC</createdTime>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<importedID>FF52949F-826C-6303-5383-5B031A0C2106</importedID>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nome" id="089E80CC-FA70-90D5-FD21-6FB71823DBB8">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 22:43:58 UTC</createdTime>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<importedID>64BE7FFC-6007-500A-B8E6-15D69663E828</importedID>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="latitude" id="9E81B4D8-0C0C-2867-466B-7CF12F4DDF9D">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:07:20 UTC</createdTime>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="longitude" id="C8CE5F61-1052-C2D6-D450-C331775BA5E1">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:07:20 UTC</createdTime>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="831A0093-3225-FD62-C0A7-3E6D506FC546" name="PORTO PK">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 22:43:58 UTC</createdTime>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<importedID>BC834FEE-CE6D-ED2A-EFFE-0DB4424DBBC2</importedID>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>9CC2BB5F-AE92-141C-C7BF-613299BE7419</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

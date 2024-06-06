@@ -1,0 +1,167 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="ECF16A16-3B0F-F307-521B-7112341BC154" name="HISTORICO_LOCALIZACAO">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 22:43:58 UTC</createdTime>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<importedID>6D7B9B73-D26A-C28A-B3B2-06A21E05C745</importedID>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_historico" id="131DA1C1-4F7E-0A78-611D-70E684176F66">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 22:43:58 UTC</createdTime>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<importedID>A1004674-DDFD-FDE1-8F4D-F1A020D84B44</importedID>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="historico_timestamp" id="0DC40BAE-F563-E21C-777D-CD8A295B6910">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 22:43:58 UTC</createdTime>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<importedID>A7A51FB6-43B9-E7F7-3B03-C9E355B04B0E</importedID>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT047</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_operacao" id="F5EF0D03-B43C-7DFB-9BAA-3F479A83A2B2">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:09:50 UTC</createdTime>
+<generatorID>91712C7C-57A1-0C43-DE3C-D277EF314E14</generatorID>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<referedAttribute>B0465DCA-791F-C7A1-2971-085D12ED2EE3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="operecao_timestamp" id="06CB93D3-5D7A-15EB-0523-359D3292B4DB">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:10:40 UTC</createdTime>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT047</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_navio" id="60614CCF-E681-B3C8-C3A3-1ADC33D61E31">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:10:40 UTC</createdTime>
+<generatorID>2CE2BCD0-F48D-B5EF-CBE0-ED1FA57DED7A</generatorID>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="quantidade_agua" id="DA27C379-C25D-4142-6A32-F55EB3F2F5D4">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:10:40 UTC</createdTime>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_tipoOperacao" id="EED6B1D0-3D4E-DFF1-59D9-EF391B7B7F8D">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:10:40 UTC</createdTime>
+<generatorID>25D6F440-D48C-E5E6-3311-090B8297760C</generatorID>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_porto" id="16FB248D-B963-9534-1873-43F6B5C1D60E">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:10:40 UTC</createdTime>
+<generatorID>6218BC82-5CAB-E294-BEF2-681DBD944576</generatorID>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="latitude" id="112F12E6-C4C3-84A4-D4BD-507CE790DA73">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:10:40 UTC</createdTime>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="longitude" id="6C8EF837-A44E-5C62-EB54-326154411CEB">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:10:40 UTC</createdTime>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="722EB32D-C911-23E1-D4F6-90C58639D5EF" name="LOCALIZACAO_HISTORICO PK">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 22:43:58 UTC</createdTime>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<importedID>6B340DDC-4D6B-7D43-7928-7CBC3F852792</importedID>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>131DA1C1-4F7E-0A78-611D-70E684176F66</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

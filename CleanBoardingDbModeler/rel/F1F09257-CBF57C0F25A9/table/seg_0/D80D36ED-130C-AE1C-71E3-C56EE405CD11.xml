@@ -1,0 +1,174 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D80D36ED-130C-AE1C-71E3-C56EE405CD11" name="OPERACAO_LASTRO">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:48:32 UTC</createdTime>
+<generatorID>59C0BC98-61EB-CFB7-57CA-011B91375B26</generatorID>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_operacao" id="9BB22450-A505-5D45-5FD3-7FA08CD66CBD">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:48:32 UTC</createdTime>
+<generatorID>B0465DCA-791F-C7A1-2971-085D12ED2EE3</generatorID>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="quantidade_agua" id="2E48D9D2-0C96-21D0-65F4-BD4113249550">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:48:32 UTC</createdTime>
+<generatorID>E6B941EC-F770-A807-8FCB-10AD8F5E5261</generatorID>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="operecao_timestamp" id="A462BD38-B935-DCEE-69E1-22F83C92EB8F">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:48:32 UTC</createdTime>
+<generatorID>F5F39DB8-431C-0B94-9D44-DEB97BC029AF</generatorID>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT047</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NAVIO_id_navio" id="769C2D33-CE59-0BB3-1DB2-179EC1F3A123">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:48:32 UTC</createdTime>
+<generatorID>9EF4B46B-0C49-6BA7-3D4C-C5C9EFA4DC43</generatorID>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FD9E9431-A9CA-A081-40D1-7BD70550CA07" referredColumn="33ED7993-224A-E9D2-63D3-83324E6B6A29"/>
+</associations>
+</Column>
+<Column name="TIPO_OPERACAO_id_tipoOperacao" id="32EC56EA-0735-54DA-D5C9-A4907DCDA465">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:48:32 UTC</createdTime>
+<generatorID>D49F98FC-686E-A90A-D2DB-ED8590A09B97</generatorID>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="15358A1F-5249-CF33-EA95-48342B2ABCA9" referredColumn="CDEA5D03-A114-B27C-36B7-6C45849788E3"/>
+</associations>
+</Column>
+<Column name="DESTINO_id_porto" id="18AE5FEC-D80C-F82A-71FB-B397C4FF5934">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:48:32 UTC</createdTime>
+<generatorID>1084CBB8-74DF-2F77-A1BD-E0F048DC13C7</generatorID>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="39D9FBF0-7795-9C12-EBEF-13ADA31E9897" referredColumn="26CF36EA-2CA9-9A98-9E77-601D929FD287"/>
+</associations>
+</Column>
+<Column name="latitude" id="AF7CEC63-8BE2-4D82-889B-FAD06D253CDC">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:48:32 UTC</createdTime>
+<generatorID>095BB083-0C42-993E-ECE4-D54876C65CC7</generatorID>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="longitude" id="74E3877A-9EC9-4C9F-590E-1CB2EEC0D9C5">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:48:32 UTC</createdTime>
+<generatorID>4CDE19A3-3D34-807E-0890-7796534C4D8C</generatorID>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F2AEB534-EC5B-8A89-C3C9-511E890CED5B" name="OPERACAO_LASTRO_PK">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:48:32 UTC</createdTime>
+<generatorID>B9A77335-5B6C-8462-366B-A349AC59A71F</generatorID>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9BB22450-A505-5D45-5FD3-7FA08CD66CBD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="866D3ED8-705A-C844-F847-14D2139C5412" name="OPERACAO_LASTRO__IDX">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:48:32 UTC</createdTime>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>6218BC82-5CAB-E294-BEF2-681DBD944576</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="18AE5FEC-D80C-F82A-71FB-B397C4FF5934"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="519933E1-F3CC-5EB6-26DC-AC277B829BB5" name="OPERACAO_LASTRO_NAVIO_FK">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:48:32 UTC</createdTime>
+<generatorID>2CE2BCD0-F48D-B5EF-CBE0-ED1FA57DED7A</generatorID>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="769C2D33-CE59-0BB3-1DB2-179EC1F3A123"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1A09077D-6EB1-BDAF-DC53-8432F136F337" name="OPERACAO_LASTRO_TIPO_OPERACAO_FK">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:48:32 UTC</createdTime>
+<generatorID>25D6F440-D48C-E5E6-3311-090B8297760C</generatorID>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="32EC56EA-0735-54DA-D5C9-A4907DCDA465"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4D9506DF-7666-75E5-42B5-579ECBD42AD8" name="OPERACAO_LASTRO_DESTINO_FK">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:48:32 UTC</createdTime>
+<generatorID>6218BC82-5CAB-E294-BEF2-681DBD944576</generatorID>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="18AE5FEC-D80C-F82A-71FB-B397C4FF5934"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

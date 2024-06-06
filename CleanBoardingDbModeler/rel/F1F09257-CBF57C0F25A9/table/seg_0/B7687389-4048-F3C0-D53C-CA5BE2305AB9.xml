@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B7687389-4048-F3C0-D53C-CA5BE2305AB9" name="NAVIO">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:48:32 UTC</createdTime>
+<generatorID>382BB8B7-8415-9183-540F-AE310F2A6536</generatorID>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_navio" id="33ED7993-224A-E9D2-63D3-83324E6B6A29">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:48:32 UTC</createdTime>
+<generatorID>D581B90B-D389-C2CF-C7DB-E277632F7B97</generatorID>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nome" id="26C75C1A-46B9-5CA1-D1DF-4884D83BCB26">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:48:32 UTC</createdTime>
+<generatorID>1BAA2F53-FA9A-E1E6-8B52-9ED4F010A94E</generatorID>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="capacidade_lastro" id="2660FFE3-20DE-EB3D-2930-35B60756703C">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:48:32 UTC</createdTime>
+<generatorID>B1677D18-001B-A7B1-2147-DED7D321252C</generatorID>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TIPO_NAVIO_id_tipoNavio" id="FC0D575E-B308-08D9-95A0-A498DF8C0BAE">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:48:32 UTC</createdTime>
+<generatorID>E9338838-0DA3-FE18-CCD4-F86E82BC59B0</generatorID>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D52BFEBF-E074-D095-4ADE-9F8964A71D9E" referredColumn="5B15C717-46CA-9153-A39B-F66EB35630BC"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="80E0F164-DFE0-EC02-F256-34D381B42645" name="NAVIO_PK">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:48:32 UTC</createdTime>
+<generatorID>070C1398-FC73-56EB-869D-93BF2B321731</generatorID>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="33ED7993-224A-E9D2-63D3-83324E6B6A29"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8CDA7F13-0FDC-DB35-9302-658FA4431EDA" name="NAVIO_TIPO_NAVIO_FK">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:48:32 UTC</createdTime>
+<generatorID>ECBBA5FE-D796-0199-F6C2-FF8CBD8BD798</generatorID>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FC0D575E-B308-08D9-95A0-A498DF8C0BAE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="FD9E9431-A9CA-A081-40D1-7BD70550CA07" containerWithKeyObject="D80D36ED-130C-AE1C-71E3-C56EE405CD11" localFKIndex="519933E1-F3CC-5EB6-26DC-AC277B829BB5" name="OPERACAO_LASTRO_NAVIO_FK">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:48:32 UTC</createdTime>
+<generatorID>2CE2BCD0-F48D-B5EF-CBE0-ED1FA57DED7A</generatorID>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<referredTableLongName>NAVIO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>B7687389-4048-F3C0-D53C-CA5BE2305AB9</referredTableID>
+<keyObject>80E0F164-DFE0-EC02-F256-34D381B42645</keyObject>
+<referredKeyID>80E0F164-DFE0-EC02-F256-34D381B42645</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_navio</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

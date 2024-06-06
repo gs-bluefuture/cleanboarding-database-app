@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="5B19464D-7B25-4F3E-E641-6A84A641D6B5" containerWithKeyObject="E9D6F07A-3A41-CAEC-139D-522DC0D2DC42" localFKIndex="738C8B3C-729B-463A-1C03-BD716922C58D" name="HISTORICO_LOCALIZACAO_OPERACAO_LASTRO_FK">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:48:32 UTC</createdTime>
+<generatorID>91712C7C-57A1-0C43-DE3C-D277EF314E14</generatorID>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<referredTableLongName>OPERACAO_LASTRO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>D80D36ED-130C-AE1C-71E3-C56EE405CD11</referredTableID>
+<keyObject>F2AEB534-EC5B-8A89-C3C9-511E890CED5B</keyObject>
+<referredKeyID>F2AEB534-EC5B-8A89-C3C9-511E890CED5B</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_operacao</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="39D9FBF0-7795-9C12-EBEF-13ADA31E9897" containerWithKeyObject="D80D36ED-130C-AE1C-71E3-C56EE405CD11" localFKIndex="4D9506DF-7666-75E5-42B5-579ECBD42AD8" name="OPERACAO_LASTRO_DESTINO_FK">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:48:32 UTC</createdTime>
+<generatorID>6218BC82-5CAB-E294-BEF2-681DBD944576</generatorID>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<referredTableLongName>DESTINO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>2F765C13-09EE-A326-7A83-3A5BFF1D292B</referredTableID>
+<keyObject>B5F8B4E7-A410-2B1B-B0B5-3CE518B21FF8</keyObject>
+<referredKeyID>B5F8B4E7-A410-2B1B-B0B5-3CE518B21FF8</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_porto</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

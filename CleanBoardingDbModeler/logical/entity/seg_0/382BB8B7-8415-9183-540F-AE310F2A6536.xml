@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="382BB8B7-8415-9183-540F-AE310F2A6536" name="NAVIO">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 22:43:58 UTC</createdTime>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<importedID>D5AD5326-795B-9C54-3010-D132B5F768CF</importedID>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_navio" id="D581B90B-D389-C2CF-C7DB-E277632F7B97">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 22:43:58 UTC</createdTime>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<importedID>B81477DE-E190-81BE-5504-39BA9FBC9B89</importedID>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nome" id="1BAA2F53-FA9A-E1E6-8B52-9ED4F010A94E">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 22:43:58 UTC</createdTime>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<importedID>E3489929-4A8C-3527-89C3-568255F21A0A</importedID>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="capacidade_lastro" id="B1677D18-001B-A7B1-2147-DED7D321252C">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 22:43:58 UTC</createdTime>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<importedID>41AC382D-C210-3E75-EB22-2147F7F37D53</importedID>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_tipoNavio" id="E9338838-0DA3-FE18-CCD4-F86E82BC59B0">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:00:06 UTC</createdTime>
+<generatorID>ECBBA5FE-D796-0199-F6C2-FF8CBD8BD798</generatorID>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<referedAttribute>D34B7B64-29CB-BDE5-4381-3163D3207221</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="070C1398-FC73-56EB-869D-93BF2B321731" name="NAVIO PK">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 22:43:58 UTC</createdTime>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<importedID>1C42FC5B-E859-0AD0-535C-B9D98DC8A34A</importedID>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D581B90B-D389-C2CF-C7DB-E277632F7B97</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

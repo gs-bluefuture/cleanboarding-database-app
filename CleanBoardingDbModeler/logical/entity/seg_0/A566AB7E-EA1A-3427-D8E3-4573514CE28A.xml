@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A566AB7E-EA1A-3427-D8E3-4573514CE28A" name="TIPO_OPERACAO">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 22:43:58 UTC</createdTime>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<importedID>077D3C35-DF04-C0D7-D7D7-5C3C1AE579FA</importedID>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_tipoOperacao" id="E7C45E05-662B-4DCB-EA1A-D8A2F23DD4D7">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 22:43:58 UTC</createdTime>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<importedID>8FAC3B45-F942-E8AE-9B05-83FBAB9736C9</importedID>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nomeOperacao" id="7470DADB-4288-7C9C-BF4E-E4D3C2CDEC3D">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 22:43:58 UTC</createdTime>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<importedID>C2EAC90C-C939-8DC0-CEE8-BEEEFED3E8E8</importedID>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="29BBAD52-3B37-F988-8857-7ED5A5DDE168" name="TIPO_OPERACAO PK">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 22:43:58 UTC</createdTime>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<importedID>2CE8CC8A-A6EE-5927-F1E9-4A981ED91716</importedID>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E7C45E05-662B-4DCB-EA1A-D8A2F23DD4D7</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

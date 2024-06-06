@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_15" directorySegmentName="seg_0" id="2CE2BCD0-F48D-B5EF-CBE0-ED1FA57DED7A">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 22:57:14 UTC</createdTime>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<sourcePk>070C1398-FC73-56EB-869D-93BF2B321731</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>382BB8B7-8415-9183-540F-AE310F2A6536</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>59C0BC98-61EB-CFB7-57CA-011B91375B26</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

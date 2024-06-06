@@ -1,0 +1,144 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="59C0BC98-61EB-CFB7-57CA-011B91375B26" name="OPERACAO_LASTRO">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 22:43:58 UTC</createdTime>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<importedID>C880B40E-FE43-5A26-F800-EC22999DDCE3</importedID>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_operacao" id="B0465DCA-791F-C7A1-2971-085D12ED2EE3">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 22:43:58 UTC</createdTime>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<importedID>3272CA82-7163-5E22-718E-BA726FF16379</importedID>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="quantidade_agua" id="E6B941EC-F770-A807-8FCB-10AD8F5E5261">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 22:43:58 UTC</createdTime>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<importedID>5D19A92A-987C-AFB1-0AA1-5F6A69434002</importedID>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="operecao_timestamp" id="F5F39DB8-431C-0B94-9D44-DEB97BC029AF">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 22:43:58 UTC</createdTime>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<importedID>8CD560AC-D681-4B5F-1F64-E8752C220529</importedID>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT047</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_navio" id="9EF4B46B-0C49-6BA7-3D4C-C5C9EFA4DC43">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 22:57:14 UTC</createdTime>
+<generatorID>2CE2BCD0-F48D-B5EF-CBE0-ED1FA57DED7A</generatorID>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<referedAttribute>D581B90B-D389-C2CF-C7DB-E277632F7B97</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_tipoOperacao" id="D49F98FC-686E-A90A-D2DB-ED8590A09B97">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 22:59:47 UTC</createdTime>
+<generatorID>25D6F440-D48C-E5E6-3311-090B8297760C</generatorID>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<referedAttribute>E7C45E05-662B-4DCB-EA1A-D8A2F23DD4D7</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_porto" id="1084CBB8-74DF-2F77-A1BD-E0F048DC13C7">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:06:35 UTC</createdTime>
+<generatorID>6218BC82-5CAB-E294-BEF2-681DBD944576</generatorID>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<referedAttribute>9CC2BB5F-AE92-141C-C7BF-613299BE7419</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="latitude" id="095BB083-0C42-993E-ECE4-D54876C65CC7">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:07:30 UTC</createdTime>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="longitude" id="4CDE19A3-3D34-807E-0890-7796534C4D8C">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:07:30 UTC</createdTime>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B9A77335-5B6C-8462-366B-A349AC59A71F" name="OPERACAO PK">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 22:43:58 UTC</createdTime>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<importedID>AFDF9DB6-F432-437A-DE0D-4691391A097E</importedID>
+<engineerTo>
+<item key="F1F09257-CB6C-2E4B-DC61-CBF57C0F25A9" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B0465DCA-791F-C7A1-2971-085D12ED2EE3</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

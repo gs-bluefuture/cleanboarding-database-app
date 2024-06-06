@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3AB238A8-38BC-1DF9-097A-D53AA2589915" name="TIPO_NAVIO">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:48:32 UTC</createdTime>
+<generatorID>918A99A3-71C8-A81A-C50A-42DCA32E34EF</generatorID>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_tipoNavio" id="5B15C717-46CA-9153-A39B-F66EB35630BC">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:48:32 UTC</createdTime>
+<generatorID>D34B7B64-29CB-BDE5-4381-3163D3207221</generatorID>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TipoNome" id="D735AA74-249F-7FAD-970E-FAE4B893C6D3">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:48:32 UTC</createdTime>
+<generatorID>E4781E7F-2972-DF09-E8C1-79A12CEEC209</generatorID>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6B631C40-3763-410D-BC45-D719B3CEF1BD" name="TIPO_NAVIO_PK">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 23:48:32 UTC</createdTime>
+<generatorID>DA29658F-DA0A-D530-3958-C01AB745C805</generatorID>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5B15C717-46CA-9153-A39B-F66EB35630BC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

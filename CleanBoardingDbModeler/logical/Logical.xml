@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="E5C843E5-B741-EF32-8E80-CCD3917F5B1F" mainViewID="B50885BA-5F6C-E53A-7080-84EB492A8F64">
+<createdBy>matpi</createdBy>
+<createdTime>2024-06-06 22:42:41 UTC</createdTime>
+<ownerDesignName>CleanBoardingDbModeler</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>
