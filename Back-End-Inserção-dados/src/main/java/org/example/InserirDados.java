@@ -51,7 +51,7 @@ public class InserirDados {
             conn.commit(); // Confirmar todas as operações
             System.out.println("Inserções realizadas com sucesso.");
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println(String.format("Erro ao executar procedure:%s", e.getMessage()));
             try {
                 if (conn != null) conn.rollback();
             } catch (SQLException ex) {
