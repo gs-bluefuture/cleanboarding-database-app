@@ -437,10 +437,95 @@ EXCEPTION
         RAISE;
 END manage_historico_localizacao;
 /
-
 EXEC manage_historico_localizacao('INSERT', 1, SYSTIMESTAMP, 1, SYSTIMESTAMP, 1, 500, 1, 1, 450, 120);
 EXEC manage_historico_localizacao('UPDATE', 1, SYSTIMESTAMP, 1, SYSTIMESTAMP, 1, 600, 1, 1, 460, 130);
 EXEC manage_historico_localizacao('DELETE', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 
 commit;
+select * from historico_localizacao;
+------------------------------------------------------
+--Relatorios
+SET SERVEROUTPUT ON;
+
+CREATE OR REPLACE PROCEDURE relatorio_historico_localizacao
+IS
+    CURSOR c_historico IS
+        SELECT 
+            h.id_historico,
+            h.historico_timestamp,
+            h.operacao_lastro_id_operacao,
+            o.operecao_timestamp AS operacao_timestamp,
+            n.nome AS nome_navio,
+            t.tiponome AS tipo_navio,
+            h.quantidade_agua,
+            tp.nomeoperacao AS tipo_operacao,
+            d.nome AS destino,
+            h.latitude,
+            h.longitude
+        FROM 
+            historico_localizacao h
+        JOIN 
+            operacao_lastro o ON h.operacao_lastro_id_operacao = o.id_operacao
+        JOIN 
+            navio n ON h.id_navio = n.id_navio
+        JOIN 
+            tipo_navio t ON n.tipo_navio_id_tiponavio = t.id_tiponavio
+        JOIN 
+            tipo_operacao tp ON h.id_tipooperacao = tp.id_tipooperacao
+        JOIN 
+            destino d ON h.id_porto = d.id_porto
+        ORDER BY 
+            h.historico_timestamp;
+
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('ID_HISTORICO | HISTORICO_TIMESTAMP | OPERACAO_ID | OPERACAO_TIMESTAMP | NOME_NAVIO | TIPO_NAVIO | QUANTIDADE_AGUA | TIPO_OPERACAO | DESTINO | LATITUDE | LONGITUDE');
+    DBMS_OUTPUT.PUT_LINE('----------------------------------------------------------------------------------------------------------------------------');
+
+    FOR r IN c_historico LOOP
+        DBMS_OUTPUT.PUT_LINE(r.id_historico || ' | ' || r.historico_timestamp || ' | ' || r.operacao_lastro_id_operacao || ' | ' || r.operacao_timestamp || ' | ' || r.nome_navio || ' | ' || r.tipo_navio || ' | ' || r.quantidade_agua || ' | ' || r.tipo_operacao || ' | ' || r.destino || ' | ' || r.latitude || ' | ' || r.longitude);
+    END LOOP;
+END;
+/
+
+CREATE OR REPLACE PROCEDURE relatorio_operacao_lastro
+IS
+    CURSOR c_operacao IS
+        SELECT 
+            o.id_operacao,
+            o.operecao_timestamp,
+            n.nome AS nome_navio,
+            t.tiponome AS tipo_navio,
+            o.quantidade_agua,
+            tp.nomeoperacao AS tipo_operacao,
+            d.nome AS destino,
+            o.latitude,
+            o.longitude
+        FROM 
+            operacao_lastro o
+        JOIN 
+            navio n ON o.navio_id_navio = n.id_navio
+        JOIN 
+            tipo_navio t ON n.tipo_navio_id_tiponavio = t.id_tiponavio
+        JOIN 
+            tipo_operacao tp ON o.tipo_operacao_id_tipooperacao = tp.id_tipooperacao
+        JOIN 
+            destino d ON o.destino_id_porto = d.id_porto
+        ORDER BY 
+            o.operecao_timestamp;
+
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('ID_OPERACAO | OPERACAO_TIMESTAMP | NOME_NAVIO | TIPO_NAVIO | QUANTIDADE_AGUA | TIPO_OPERACAO | DESTINO | LATITUDE | LONGITUDE');
+    DBMS_OUTPUT.PUT_LINE('----------------------------------------------------------------------------------------------------------------------------');
+
+    FOR r IN c_operacao LOOP
+        DBMS_OUTPUT.PUT_LINE(r.id_operacao || ' | ' || r.operecao_timestamp || ' | ' || r.nome_navio || ' | ' || r.tipo_navio || ' | ' || r.quantidade_agua || ' | ' || r.tipo_operacao || ' | ' || r.destino || ' | ' || r.latitude || ' | ' || r.longitude);
+    END LOOP;
+END;
+/
+BEGIN
+    relatorio_historico_localizacao;
+     relatorio_operacao_lastro;
+END;
+/
+
